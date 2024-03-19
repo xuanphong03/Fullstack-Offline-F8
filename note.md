@@ -1,3 +1,5 @@
+<!-- Buổi 1 -->
+
 # thẻ block
 
 - luôn phát sinh ở hàng mới
@@ -13,3 +15,8 @@
 # what is semantic html ?
 
 # thẻ div: non-semangtic, không thay đổi định dạng
+
+<!-- Buổi 2 -->
+
+1. thẻ trích dẫn: <blockquote></blockquote>
+2. thẻ prev: ở server trả về như nào thì hiển thị y hệt như vậy
