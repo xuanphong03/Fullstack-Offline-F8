@@ -18,5 +18,15 @@
 
 <!-- Buổi 2 -->
 
-1. thẻ trích dẫn: <blockquote></blockquote>
-2. thẻ prev: ở server trả về như nào thì hiển thị y hệt như vậy
+1. thẻ trích dẫn : <blockquote></blockquote>
+2. thẻ <prev></prev> : ở server trả về như nào thì hiển thị y hệt như vậy
+3. HTML entity dùng để tránh lỗi bảo mật XSS
+
+4. phân biệt đường dẫn tương đối và đường dẫn tuyệt đối.
+   ./duong-dan tương đối
+   duong-dan tương đối
+   /duong-dan tuyệt đối (di chuyển về gốc của tên miền - sau port)
+   //duong-dan.com tuyệt đối
+
+5. img là thẻ inline - trình duyệt coi img (inline) như text
+6. thẻ span: dùng để định dạng kiểu, ko làm thay đổi định dạng gốc của HTML. là 1 thẻ non-semantic
