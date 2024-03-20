@@ -4,114 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bai 1</title>
+    <style>
+      table th {
+        text-align: left;
+      }
+
+      table td input,
+      table td select {
+        padding: 4px;
+      }
+
+      table td select {
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <form>
-      <h2>Try a free sample</h2>
-      <p style="width: 400px">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
-        corporis dolor animi eaque, illum illo exercitationem optio nesciunt
-        atque debitis, eveniet modi cumque repellat laborum sit, consequatur
+      <h1>Try a free sample</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam<br />
+        corporis dolor animi eaque, illum illo exercitationem optio nesciunt<br />
+        atque debitis, eveniet modi cumque repellat laborum sit, consequatur<br />
         beatae cupiditate pariatur?
       </p>
       <table style="margin-bottom: 8px">
         <tr>
-          <td>
-            <label for="fisrt-name"><b>First name</b></label>
-            <div>
-              <input
-                style="padding: 4px"
-                id="fisrt-name"
-                type="text"
-                value="John"
-              />
-            </div>
-          </td>
-          <td>
-            <label for="last-name"><b>Last name</b></label>
-            <div>
-              <input
-                style="padding: 4px"
-                id="last-name"
-                type="text"
-                value="Smith"
-              />
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label for="email-address"><b>Email address</b></label>
-            <div>
-              <input
-                style="padding: 4px"
-                id="email-address"
-                type="email"
-                value="john@example.com"
-              />
-            </div>
-          </td>
-          <td>
-            <label for="address"><b>Address</b></label>
-            <div>
-              <input
-                style="padding: 4px"
-                id="address"
-                type="text"
-                value="Silk St"
-              />
-            </div>
-          </td>
+          <th>First name</th>
+          <th>Last name</th>
         </tr>
         <tr>
           <td>
-            <label for="city"><b>City</b></label>
-            <div>
-              <input
-                style="padding: 4px"
-                id="city"
-                type="text"
-                value="London"
-              />
-            </div>
+            <input id="fisrt-name" type="text" value="John" />
           </td>
           <td>
-            <label for="state"
-              ><b>State</b> <span style="color: gray">(optional)</span>
-            </label>
-            <div><input style="padding: 4px" id="state" type="text" /></div>
+            <input id="last-name" type="text" value="Smith" />
           </td>
         </tr>
         <tr>
+          <th>Email address</th>
+          <th>Address</th>
+        </tr>
+        <tr>
           <td>
-            <label for="zip-code"><b>Zip code</b></label>
-            <div>
-              <input
-                style="padding: 4px"
-                id="zip-code"
-                type="text"
-                value="EC2Y 8DS"
-              />
-            </div>
+            <input id="email-address" type="email" value="john@example.com" />
           </td>
           <td>
-            <label for="country"><b>Country</b></label>
-            <div>
-              <select
-                style="padding: 4px; width: 100%"
-                id="country"
-                type="text"
-              >
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Vietnam">Vietnam</option>
-                <option value="Korea">Korea</option>
-              </select>
-            </div>
+            <input id="address" type="text" value="Silk St" />
+          </td>
+        </tr>
+        <tr>
+          <th>City</th>
+          <th>
+            State <span style="font-weight: 300; color: grey">(optional)</span>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input id="city" type="text" value="London" />
+          </td>
+          <td>
+            <div><input id="state" type="text" /></div>
+          </td>
+        </tr>
+        <tr>
+          <th>ZIP code</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>
+            <input id="zip-code" type="text" value="EC2Y 8DS" />
+          </td>
+          <td>
+            <select id="country" type="text">
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Korea">Korea</option>
+            </select>
           </td>
         </tr>
       </table>
-      <input style="padding: 4px" type="submit" value="SEND ME FREE COFFEE" />
+      <button style="padding: 4px">SEND ME FREE COFFEE</button>
     </form>
   </body>
 </html>
