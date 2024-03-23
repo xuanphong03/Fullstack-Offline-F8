@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-size {
+  color: white;
+  width: 150px;
+  margin: 8px auto;
+  padding: 12px;
+  background: rgb(117, 117, 200);
+}
+
+.box-size p {
+  text-align: center;
+  font-size: 24px;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.title span {
+  font-weight: 900;
+  color: rgb(0, 123, 255);
+}
+
+.description {
+  text-align: center;
+}
+
+.action {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.action button {
+  border: none;
+  padding: 8px 12px;
+  margin-left: 8px;
+  margin-right: 8px;
+  outline: none;
+  background: #3e3c3c;
+  color: white;
+  border-radius: 4px;
+}
+
+.action button:hover {
+  background: rgb(0, 123, 255);
+  cursor: pointer;
+}

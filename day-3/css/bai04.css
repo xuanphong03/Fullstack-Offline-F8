@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-map {
+  padding: 32px;
+}
+
+.info-list {
+  list-style: none;
+}
+
+.info-list .info-item {
+  margin-bottom: 2px;
+}
+
+.info-list .info-item:first-child {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.info-item:not(:last-child) a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav {
+  margin-bottom: 12px;
+  display: flex;
+}
+
+nav .address-list {
+  display: flex;
+  list-style: none;
+  border: 1px solid rgb(186, 109, 46);
+  border-radius: 3px;
+}
+
+nav .address-list .address-item {
+  padding: 12px 24px;
+  text-align: center;
+  color: rgb(186, 109, 46);
+}
+
+nav .address-list .address-item:hover {
+  cursor: pointer;
+  color: white;
+  background: rgb(186, 109, 46);
+  transition: linear 0.1s;
+}
+
+nav .address-list .address-item.active {
+  color: white;
+  background: rgb(186, 109, 46);
+  font-weight: bold;
+}
+
+article {
+  display: flex;
+}
+
+.contact-information {
+  flex: 1;
+  padding: 32px 24px;
+  background: #e9e5e5;
+}
+
+.contact-information h2 {
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+article .location-company {
+  flex: 2;
+}
+
+article .location-company iframe {
+  width: 100%;
+}
