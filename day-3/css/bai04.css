@@ -61,7 +61,7 @@ nav .address-list .address-item.active {
   font-weight: bold;
 }
 
-article {
+.contact-map .wrapper {
   display: flex;
 }
 
@@ -76,10 +76,10 @@ article {
   margin-bottom: 12px;
 }
 
-article .location-company {
+.wrapper .location-company {
   flex: 2;
 }
 
-article .location-company iframe {
+.wrapper .location-company iframe {
   width: 100%;
 }
