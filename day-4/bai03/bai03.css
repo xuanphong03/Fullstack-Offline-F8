@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.best-seller {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.title {
+    font-size: 4.8rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Categories list */
+
+label {
+    padding: 8px 12px;
+    background-color: #f4f4f4;
+    margin-left: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.category-item:checked + label[for="skincare"]{
+    color: #fff;
+    background-color: #28388d;
+}
+
+.category-item:checked + label[for="haircare"]{
+    color: #fff;
+    background-color: #28388d;
+}
+
+.category-item:checked + label[for="cosmetics-cases"]{
+    color: #fff;
+    background-color: #28388d;
+}
+
+.category-item:checked + label[for="fragrance"]{
+    color: #fff;
+    background-color: #28388d;
+}
+
+.category-item:checked + label[for="makeup"]{
+    color: #fff;
+    background-color: #28388d;
+}
+
+/* Product list */
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.product-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+.product-item .product-img{
+    max-width: 200px;
+    margin-bottom: 24px;
+}
+
+.product-item .product-rating i {
+    font-size: 1.4rem;
+    color: #9f9f9f;
+    margin-bottom: 12px;
+}
+
+.product-item .product-rating .rated {
+    color: #f4c242;
+}
+
+.product-item .product-name {
+    color: #777777;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.product-item .product-price {
+    color: #464646;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.product-item .options {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 50%;
+}
+
+.product-item:hover .options {
+    display: block;
+}
+
+.product-item .options .options-box {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.product-item .options .options-box .option-icon{
+    text-align: center;
+    padding: 8px 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.product-item .options .btn-add-to-cart {
+    margin-top: 8px;
+    padding: 8px 6px;
+}
+
+.product-item .options .options-box .option-icon,
+.product-item .options .btn-add-to-cart {
+    color: #fff;
+    background: #29388e;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Show product list */
+.product-list {
+    display: none;
+}
+
+#skincare:checked ~ #product-skincare-list,
+#haircare:checked ~ #product-haircare-list,
+#cosmetics-cases:checked ~ #product-cosmetics-cases-list,
+#fragrance:checked ~ #product-fragrance-list,
+#makeup:checked ~ #product-makeup-list {
+    display: flex;
+}

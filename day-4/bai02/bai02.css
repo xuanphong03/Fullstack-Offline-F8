@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.5;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.title,
+input {
+    font-family: "Bebas Neue",sans-serif;;
+}
+
+.sub-title, button {
+    font-family: "Alfa Slab One",serif;
+}
+
+.form-reservation {
+    margin: 24px auto;
+    max-width: 500px;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.sub-title {
+    font-size: 4.8rem;
+}
+
+.title,
+.sub-title {
+    text-align: center;
+    color: #3a2617;
+}
+
+table {
+    width: 100%;
+}
+
+
+table td input,
+table td button {
+    width: 100%;
+}
