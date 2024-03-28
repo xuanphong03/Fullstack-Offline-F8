@@ -27,7 +27,7 @@ input {
 
 .form-reservation {
     margin: 24px auto;
-    max-width: 500px;
+    width: 500px;
 }
 
 .title {
@@ -48,8 +48,35 @@ table {
     width: 100%;
 }
 
+th,
+td {
+    padding: 8px;
+}
 
-table td input,
-table td button {
+input {
+    border: 1px solid #e8e8e8;
+    font-size: 1.6rem;
+}
+
+input::placeholder {
+    color: #3d3d5a;
+    font-size: 1.6rem;
+}
+
+input[type="date"], input[type="time"] {
+    font-size: 1.6rem;
+}
+
+input,
+.btn-submit {
     width: 100%;
+    padding: 8px;
+    outline: none;
+}
+
+.btn-submit {
+    color: #fff;
+    background-color: #af332b;
+    border-radius: 4px;
+    border: 1px solid #af332b;
 }

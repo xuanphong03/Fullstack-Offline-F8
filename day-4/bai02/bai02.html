@@ -17,16 +17,30 @@
         </tr>
         <tr>
           <td>
-            <label>
-              <input type="date" name="date_input" />
-              <span class="placeholder">DATE</span>
+              <label>
+                <input
+                  type="text"
+                  onfocus="this.type='date'"
+                  onblur="this.type='text'"
+                  placeholder="DATE"
+                />
+              </label>
+          </td>
+          <td>
+              <label>
+                <input
+                type="text"
+                placeholder="TIME"
+                onfocus="this.type='time'"
+                onblur="this.type='text'"
+              />
+              </label>
             </label>
           </td>
-          <td><input type="time" placeholder="TIME" /></td>
         </tr>
         <tr>
           <td><input type="number" placeholder="PEOPLE" /></td>
-          <td><button>Find A Table</button></td>
+          <td><button class="btn-submit">Find A Table</button></td>
         </tr>
       </table>
     </form>
