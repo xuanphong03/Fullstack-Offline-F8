@@ -28,7 +28,13 @@ body {
 
 /* Categories list */
 
-label {
+.categories-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.categories-list .category-item label {
     padding: 8px 12px;
     background-color: #f4f4f4;
     margin-left: 6px;
@@ -36,27 +42,31 @@ label {
     cursor: pointer;
 }
 
-.category-item:checked + label[for="skincare"]{
+
+
+/* Navigate category */
+
+#skincare:checked ~ .categories-list .category-item label[for="skincare"]{
     color: #fff;
     background-color: #28388d;
 }
 
-.category-item:checked + label[for="haircare"]{
+#haircare:checked ~ .categories-list .category-item label[for="haircare"]{
     color: #fff;
     background-color: #28388d;
 }
 
-.category-item:checked + label[for="cosmetics-cases"]{
+#cosmetics-cases:checked ~ .categories-list .category-item label[for="cosmetics-cases"]{
     color: #fff;
     background-color: #28388d;
 }
 
-.category-item:checked + label[for="fragrance"]{
+#fragrance:checked ~ .categories-list .category-item label[for="fragrance"]{
     color: #fff;
     background-color: #28388d;
 }
 
-.category-item:checked + label[for="makeup"]{
+#makeup:checked ~ .categories-list .category-item label[for="makeup"]{
     color: #fff;
     background-color: #28388d;
 }

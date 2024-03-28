@@ -16,51 +16,25 @@
   <body>
     <section class="best-seller">
       <h2 class="title">Best Seller</h2>
-      <input
-        checked
-        name="categories"
-        hidden
-        type="radio"
-        id="skincare"
-        class="category-item active"
-      />
-      <label for="skincare">Skincare</label>
+      <input checked name="categories" hidden type="radio" id="skincare" />
+      <input name="categories" hidden type="radio" id="haircare" />
+      <input name="categories" hidden type="radio" id="cosmetics-cases" />
+      <input name="categories" hidden type="radio" id="fragrance" />
+      <input name="categories" hidden type="radio" id="makeup" />
 
-      <input
-        name="categories"
-        hidden
-        type="radio"
-        id="haircare"
-        class="category-item"
-      />
-      <label for="haircare">Haircare</label>
-
-      <input
-        name="categories"
-        hidden
-        type="radio"
-        id="cosmetics-cases"
-        class="category-item"
-      />
-      <label for="cosmetics-cases">Cosmetics Cases</label>
-
-      <input
-        name="categories"
-        hidden
-        type="radio"
-        id="fragrance"
-        class="category-item"
-      />
-      <label for="fragrance">Fragrance</label>
-
-      <input
-        name="categories"
-        hidden
-        type="radio"
-        id="makeup"
-        class="category-item"
-      />
-      <label for="makeup">Makeup</label>
+      <ul class="categories-list">
+        <li class="category-item"><label for="skincare">Skincare</label></li>
+        <li class="category-item"><label for="haircare">Haircare</label></li>
+        <li class="category-item">
+          <label for="cosmetics-cases">Cosmetics Cases</label>
+        </li>
+        <li class="category-item">
+          <label for="fragrance">Fragrance</label>
+        </li>
+        <li class="category-item">
+          <label for="makeup">Makeup</label>
+        </li>
+      </ul>
 
       <div id="product-skincare-list" class="product-list">
         <article class="product-item">
