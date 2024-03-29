@@ -15,15 +15,16 @@ body {
 }
 
 .footer {
-  margin: 24px;
+  padding: 24px;
+  width: 100%;
+  background: #334455;
 }
 
-.form-subribe {
+.form-subscribe {
   padding: 12px;
   border-radius: 4px;
   max-width: 700px;
   min-width: 500px;
-  background: #334455;
 }
 
 .title {
@@ -53,18 +54,18 @@ input,
   background: #e59125;
 }
 
-.form-subribe:hover input::placeholder {
-    color: #ffa20c;
+.footer:hover input::placeholder {
+  color: #ffa20c;
 }
 
-.form-subribe:hover input {
-    background: #ddd;
+.footer:hover input {
+  background: #ddd;
 }
 
-.form-subribe:hover .btn-submit {
-    background: #ffa20c;
+.footer:hover .btn-submit {
+  background: #ffa20c;
 }
 
-.form-subribe:hover .btn-submit {
-    color: #fff;
+.footer:hover .btn-submit {
+  color: #fff;
 }

@@ -52,6 +52,7 @@ html {
 
 .feedback-item .avatar-user img {
   border-radius: 50%;
+  max-width: 60px;
 }
 
 .feedback-item .feedback-content {

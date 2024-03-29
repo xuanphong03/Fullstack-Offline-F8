@@ -30,6 +30,11 @@ html {
   text-decoration: none;
 }
 
+.info-item:not(:last-child) a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
 nav {
   margin-bottom: 12px;
   display: flex;

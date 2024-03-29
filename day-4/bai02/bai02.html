@@ -7,42 +7,45 @@
     <link rel="stylesheet" href="./bai02.css" />
   </head>
   <body>
-    <form class="form-reservation">
-      <h1 class="title">RESERVATION</h1>
-      <h2 class="sub-title">Book your table</h2>
-      <table>
-        <tr>
-          <td><input type="text" placeholder="NAME" /></td>
-          <td><input type="email" placeholder="EMAIL" /></td>
-        </tr>
-        <tr>
-          <td>
+    <section class="reservation">
+      <h2 class="title">RESERVATION</h2>
+      <h3 class="sub-title">Book your table</h3>
+      <form class="form-reservation">
+        <table>
+          <tr>
+            <td><input type="text" name="name" placeholder="NAME" /></td>
+            <td><input type="email" name="email" placeholder="EMAIL" /></td>
+          </tr>
+          <tr>
+            <td>
               <label>
                 <input
                   type="text"
+                  name="date"
                   onfocus="this.type='date'"
                   onblur="this.type='text'"
                   placeholder="DATE"
                 />
               </label>
-          </td>
-          <td>
+            </td>
+            <td>
               <label>
                 <input
-                type="text"
-                placeholder="TIME"
-                onfocus="this.type='time'"
-                onblur="this.type='text'"
-              />
+                  type="text"
+                  name="time"
+                  placeholder="TIME"
+                  onfocus="this.type='time'"
+                  onblur="this.type='text'"
+                />
               </label>
-            </label>
-          </td>
-        </tr>
-        <tr>
-          <td><input type="number" placeholder="PEOPLE" /></td>
-          <td><button class="btn-submit">Find A Table</button></td>
-        </tr>
-      </table>
-    </form>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="number" name="people" placeholder="PEOPLE" /></td>
+            <td><button class="btn-submit">Find A Table</button></td>
+          </tr>
+        </table>
+      </form>
+    </section>
   </body>
 </html>

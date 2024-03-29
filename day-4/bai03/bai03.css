@@ -1,168 +1,174 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 .best-seller {
-    padding-left: 48px;
-    padding-right: 48px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .title {
-    font-size: 4.8rem;
-    text-align: center;
-    margin-bottom: 24px;
+  font-size: 4.8rem;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 /* Categories list */
 
 .categories-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
 .categories-list .category-item label {
-    padding: 8px 12px;
-    background-color: #f4f4f4;
-    margin-left: 6px;
-    margin-right: 6px;
-    cursor: pointer;
+  padding: 8px 12px;
+  background-color: #f4f4f4;
+  margin-left: 6px;
+  margin-right: 6px;
+  cursor: pointer;
 }
-
-
 
 /* Navigate category */
 
-#skincare:checked ~ .categories-list .category-item label[for="skincare"]{
-    color: #fff;
-    background-color: #28388d;
+#skincare:checked ~ nav .categories-list .category-item label[for="skincare"] {
+  color: #fff;
+  background-color: #28388d;
 }
 
-#haircare:checked ~ .categories-list .category-item label[for="haircare"]{
-    color: #fff;
-    background-color: #28388d;
+#haircare:checked ~ nav .categories-list .category-item label[for="haircare"] {
+  color: #fff;
+  background-color: #28388d;
 }
 
-#cosmetics-cases:checked ~ .categories-list .category-item label[for="cosmetics-cases"]{
-    color: #fff;
-    background-color: #28388d;
+#cosmetics-cases:checked
+  nav
+  ~ .categories-list
+  .category-item
+  label[for="cosmetics-cases"] {
+  color: #fff;
+  background-color: #28388d;
 }
 
-#fragrance:checked ~ .categories-list .category-item label[for="fragrance"]{
-    color: #fff;
-    background-color: #28388d;
+#fragrance:checked
+  ~ nav
+  .categories-list
+  .category-item
+  label[for="fragrance"] {
+  color: #fff;
+  background-color: #28388d;
 }
 
-#makeup:checked ~ .categories-list .category-item label[for="makeup"]{
-    color: #fff;
-    background-color: #28388d;
+#makeup:checked ~ nav .categories-list .category-item label[for="makeup"] {
+  color: #fff;
+  background-color: #28388d;
 }
 
 /* Product list */
 
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 64px;
-    padding-left: 24px;
-    padding-right: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 64px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .product-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;
-    border: 1px solid #ccc;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  border: 1px solid #ccc;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-radius: 4px;
 }
 
-.product-item .product-img{
-    max-width: 200px;
-    margin-bottom: 24px;
+.product-item .product-img {
+  max-width: 200px;
+  margin-bottom: 24px;
 }
 
 .product-item .product-rating i {
-    font-size: 1.4rem;
-    color: #9f9f9f;
-    margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #9f9f9f;
+  margin-bottom: 12px;
 }
 
 .product-item .product-rating .rated {
-    color: #f4c242;
+  color: #f4c242;
 }
 
 .product-item .product-name {
-    color: #777777;
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 8px;
+  color: #777777;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
 .product-item .product-price {
-    color: #464646;
-    font-size: 1.4rem;
-    font-weight: 800;
+  color: #464646;
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 .product-item .options {
-    display: none;
-    position: absolute;
-    top: 50%;
-    width: 50%;
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 50%;
 }
 
 .product-item:hover .options {
-    display: block;
+  display: block;
 }
 
 .product-item .options .options-box {
-    display: flex;
-    justify-content: space-between;
-    margin-left: -4px;
-    margin-right: -4px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -4px;
+  margin-right: -4px;
 }
 
-.product-item .options .options-box .option-icon{
-    text-align: center;
-    padding: 8px 6px;
-    margin-left: 4px;
-    margin-right: 4px;
+.product-item .options .options-box .btn-option {
+  text-align: center;
+  padding: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background: #29388e;
 }
 
 .product-item .options .btn-add-to-cart {
-    margin-top: 8px;
-    padding: 8px 6px;
+  margin-top: 8px;
+  padding: 8px 6px;
+  background: #29388e;
+  width: 100%;
 }
 
 .product-item .options .options-box .option-icon,
 .product-item .options .btn-add-to-cart {
-    color: #fff;
-    background: #29388e;
-    width: 100%;
-    cursor: pointer;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* Show product list */
 .product-list {
-    display: none;
+  display: none;
 }
 
 #skincare:checked ~ #product-skincare-list,
@@ -170,5 +176,5 @@ body {
 #cosmetics-cases:checked ~ #product-cosmetics-cases-list,
 #fragrance:checked ~ #product-fragrance-list,
 #makeup:checked ~ #product-makeup-list {
-    display: flex;
+  display: flex;
 }
