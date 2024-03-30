@@ -58,6 +58,9 @@ body {
   border-radius: 100%;
   padding: 24px;
   margin-bottom: 12px;
+  width: 120px;
+  height: 120px;
+  text-align: center;
 }
 
 .service-item .service-icon i {
