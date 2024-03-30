@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.content-box {
+  margin: 12px 8px;
+}
+
+.content-box .title {
+  color: #ffffff;
+  background: #d95924;
+  padding: 6px;
+  margin-bottom: 12px;
+}
+
+.content-box .title label {
+  cursor: pointer;
+  padding: 6px;
+}
+
+.content-box .content {
+  padding: 4px 8px;
+}
+
+.content-box .content .steps-list {
+  padding-left: 18px;
+}
+
+/* Handle toggle open / close */
+input[value="open"]:checked ~ .content {
+  display: block;
+}
+
+input[value="close"]:checked ~ .content {
+  display: none;
+}
+
+input[value="open"]:checked ~ .title .open-label {
+  display: none;
+}
+
+input[value="close"]:checked ~ .title .close-label {
+  display: none;
+}

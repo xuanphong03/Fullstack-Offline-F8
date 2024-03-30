@@ -1,0 +1,67 @@
+/* 
+    Thay đổi font chữ
+    font-family: tên font1, tên font2,...
+
+    Font chữ có 2 loại:
+    - Font mặc định trên máy tính
+    - Font nạp từ bên ngoài vào
+*/
+
+/* sans-serif: họ font ko chân
+    serif: họ font có chân
+    monospace: họ font mono 
+    */
+
+/* 
+    Trong 1 font chữ có 2 yếu tố để quy định kiểu:
+    - Độ dày: 100 -> 900 (Bội của 100)
+    - Nghiêng hay không ?
+*/
+
+/* At-rule */
+@font-face {
+  font-family: "SVN Fontbox";
+  src: url("../fonts/SVN-Fontbox-Boathouse-Filled.otf");
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-LightItalic.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Regular.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Bold.ttf");
+  font-weight: 700;
+}
+
+/* @font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-BoldItalic.ttf");
+  font-weight: 700;
+} */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 6.4rem;
+}
