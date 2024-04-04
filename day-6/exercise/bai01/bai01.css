@@ -102,11 +102,13 @@ section .description span {
   font-size: 0.8rem;
 }
 
-.contact-form > label:focus-within .icon-box-right,
-.contact-form > label:focus-within .icon-select-custom {
+.contact-form > label:focus-within .icon-box-right {
   color: #333333;
 }
-
+.contact-form > label:focus-within .icon-select-custom::before,
+.contact-form > label:focus-within .icon-select-custom::after {
+  border-color: #333333;
+}
 /* toggle icon when focus */
 .contact-form > label .icon-box-right .icon-clear {
   display: none;
@@ -152,9 +154,38 @@ label select {
 }
 
 .icon-select-custom {
+  min-width: 33px;
   padding: 8px 12px;
-  color: #ddd;
   background: #fff;
+  position: relative;
+}
+
+.icon-select-custom::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  top: 35%;
+  transform: rotate(45deg);
+  border-top: 2px solid #dddddd;
+  border-left: 2px solid #dddddd;
+}
+
+.icon-select-custom::after {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  bottom: 35%;
+  transform: translateY(100%);
+  transform: rotate(45deg);
+  border-bottom: 2px solid #dddddd;
+  border-right: 2px solid #dddddd;
+}
+
+.contact-form > label:hover .icon-select-custom::before,
+.contact-form > label:hover .icon-select-custom::after {
+  border-color: #333333;
 }
 
 /* Phần button*/
