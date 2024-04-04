@@ -53,17 +53,10 @@ header {
   min-width: 120px;
   background: #f5f5f5;
   border-radius: 99px;
-  transition: all 0.2s linear;
 }
 
 .btn-category:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(96, 0, 252, 1) 0%,
-    rgba(138, 86, 216, 1) 50%,
-    rgba(164, 130, 211, 1) 100%
-  );
-  color: #ffffff;
+  background: #ccc;
 }
 
 .pages-list {
