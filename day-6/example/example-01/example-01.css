@@ -1,0 +1,41 @@
+/* Thuộc tính border --> Tạo đường viền cho các thẻ HTML 
+
+3 thành phần cấu tạo nên border: color width style
+- border-style: none | solid | dashed | dotted | double
+- border-color: giá trị màu
+- border-width: value + unit
+
+ CÁC THUỘC TÍNH MỞ RỘNG:
+ - border-style
+ - border-top-style
+ - border-left-style
+ - border-right-style
+ - border-bottom-style
+
+ - border-color
+ - border-top-color
+ - border-left-color
+ - border-right-color
+ - border-bottom-color
+
+ - border-width
+ - border-top-width
+ - border-left-width
+ - border-right-width
+ - border-bottom-width
+
+ - border
+ - border-top
+ - border-left
+ - border-right
+ - border-bottom
+
+*/
+
+.box {
+  width: 0px;
+  height: 0px;
+  border-left: 50px solid transparent;
+  border-bottom: 50px solid blue;
+  border-right: 50px solid transparent;
+}

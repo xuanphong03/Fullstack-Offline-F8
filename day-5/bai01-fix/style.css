@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+
+body {
+  background-image: url("https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
+}
+
+.blurred-bg {
+  background-image: url("https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.blurred-bg.tinted {
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg");
+}
+
+.box {
+  width: 500px;
+  height: 300px;
+  left: calc(58% - 250px);
+  top: 25%;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  box-sizing: border-box;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  display: flex;
+  transition: box-shadow 0.3s ease;
+}
+
+.box:active {
+  cursor: move;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+
+.box .content {
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+h1,
+h2,
+a,
+p {
+  color: white;
+  font-weight: 700;
+}
+
+.blurred-bg.tinted h1,
+.blurred-bg.tinted h2,
+.blurred-bg.tinted a,
+.blurred-bg.tinted p {
+  color: black;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+  font-size: 14px;
+}

@@ -1,0 +1,209 @@
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: #ebf5fe;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 64px;
+  margin-left: 16px;
+  margin-right: 16px;
+  color: #666666;
+  justify-content: center;
+}
+
+.service-item {
+  width: 30%;
+  margin: 12px;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.service-item:hover {
+  border-color: #ea695f;
+}
+
+.service-title-box {
+  display: flex;
+  margin-bottom: 16px;
+}
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: green;
+  border-radius: 50%;
+  align-content: center;
+  text-align: center;
+  margin-right: 16px;
+}
+
+.service-item:nth-child(1) .service-title-box .service-icon {
+  background: rgb(126, 3, 3);
+  background: linear-gradient(
+    90deg,
+    rgba(126, 3, 3, 1) 0%,
+    rgba(185, 1, 1, 1) 48%,
+    rgba(234, 3, 3, 1) 100%
+  );
+}
+.service-item:nth-child(2) .service-title-box .service-icon {
+  background: rgb(3, 126, 102);
+  background: linear-gradient(
+    90deg,
+    rgba(3, 126, 102, 1) 0%,
+    rgba(1, 185, 139, 1) 48%,
+    rgba(3, 234, 178, 1) 100%
+  );
+}
+.service-item:nth-child(3) .service-title-box .service-icon {
+  background: rgb(126, 116, 3);
+  background: linear-gradient(
+    90deg,
+    rgba(126, 116, 3, 1) 0%,
+    rgba(185, 174, 1, 1) 48%,
+    rgba(234, 220, 3, 1) 100%
+  );
+}
+.service-item:nth-child(4) .service-title-box .service-icon {
+  background: rgb(3, 86, 126);
+  background: linear-gradient(
+    90deg,
+    rgba(3, 86, 126, 1) 0%,
+    rgba(1, 119, 185, 1) 48%,
+    rgba(3, 209, 234, 1) 100%
+  );
+}
+.service-item:nth-child(5) .service-title-box .service-icon {
+  background: rgb(94, 3, 126);
+  background: linear-gradient(
+    90deg,
+    rgba(94, 3, 126, 1) 0%,
+    rgba(140, 1, 185, 1) 48%,
+    rgba(200, 3, 234, 1) 100%
+  );
+}
+.service-item:nth-child(6) .service-title-box .service-icon {
+  background: rgb(78, 126, 3);
+  background: linear-gradient(
+    90deg,
+    rgba(78, 126, 3, 1) 0%,
+    rgba(79, 185, 1, 1) 48%,
+    rgba(4, 234, 3, 1) 100%
+  );
+}
+
+.service-icon i {
+  color: #ffffff;
+  font-size: 2.8rem;
+}
+
+.service-name {
+  max-width: 150px;
+  font-size: 2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.service-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.service-link {
+  color: #3b70ec;
+  font-weight: 700;
+  text-decoration: none;
+}

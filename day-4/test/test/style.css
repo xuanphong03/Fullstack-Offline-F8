@@ -1,0 +1,167 @@
+/* Attribute selector */
+
+/* 1. tag[attribute] */
+/* 2. tag[attribute="value"]: chọn thuộc tính có thuộc tính = value */
+/* 3. tag[attribute^="value"]: chọn thuộc tính bắt đầu = value */
+/* 4. tag[attribute*="value"]: chọn thuộc tính có gt chứa value*/
+/* 5. tag[attribute$="value"]: chọn thuộc tính có gt kết thúc = value */
+/* 6. tag[attribute~="value"]: chọn thuộc tính có gt là 1 từ */
+
+/* Note: class và id hoàn toàn có thể áp dụng như attribute selector */
+/* ul li a[target] {
+	color: red;
+} */
+
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul li a[href$='.vn'] {
+	color: red;
+} */
+
+/* Pseudo element */
+/* 
+  selector::name {
+  }
+  -before
+  -after
+  -first-letter
+  -first-line
+  -selection
+  -placeholder
+*/
+/* 
+h1::before {
+	content: 'Hello world';
+}
+
+h1::after {
+	content: 'Hello world';
+}
+
+p::first-letter {
+	color: red;
+}
+
+p::first-line {
+	color: green;
+}
+
+p::selection {
+	background: #000;
+	color: #fff;
+}
+
+input::placeholder {
+	color: red;
+} */
+
+/* Syntax pseudo class:
+  - active: có ở tất cả các thẻ html
+  - hover: có ở tất cả các thẻ html
+  - focus: chỉ có ở form
+  - disabled
+  - checked
+  - not
+  - first-child
+  - last-child
+  - first-of-type
+  - last-of-type
+  - nth-child
+  - nth-of-type
+
+Ngoại lệ: Tất cả các thẻ html có thể có focus nếu thêm thuộc tính tabindex
+*/
+
+/* .btn:hover {
+	color: red;
+}
+
+.btn:active {
+	color: blue;
+}
+
+input:focus::placeholder {
+	color: coral;
+}
+
+h1:focus {
+	color: pink;
+}
+
+.btn:disabled:hover {
+	color: blue;
+}
+
+.checkboxes input:checked + span {
+	color: red;
+} */
+
+/* ul li:not(.hide) {
+	color: red;
+}
+
+.list li:not(.hide):not(.hidden) {
+  color: red;
+} */
+
+/* .list li:nth-child(2n + 1) {
+	color: blue;
+} */
+
+/* #red:checked ~ p,
+#red:checked ~ label[for='red'] {
+	color: red;
+}
+
+#blue:checked ~ p,
+#blue:checked ~ label[for='blue'] {
+	color: blue;
+}
+
+#green:checked ~ p,
+#green:checked ~ label[for='green'] {
+	color: green;
+} */
+
+/* Thuộc tính color: Thay ddổi màu văn bản
+cú pháp: color: mã màu
+- mã màu: hexa, rgb, hsl
+- tên màu
+*/
+
+h1 {
+	color: red;
+}
+
+/* các giá trị kế thừa:
+	- initial
+	- inherit
+*/
+
+h1:hover {
+	/* color: initial; */
+	color: inherit;
+}
+
+.box {
+	color: blue;
+	border: 1px solid currentColor;
+}
+
+.box:hover {
+	color: red;
+}
+/* 
+.box h2 {
+	color: green;
+}
+
+.box h2:hover {
+	color: inherit;
+} */
+
+/* Thuộc tính color là 1 thuộc tính kế thừa */

@@ -49,6 +49,18 @@ section .description span {
   background: #ddd;
 }
 
+.contact-form > label:hover {
+  border-color: #333333;
+}
+
+.contact-form > label:hover .icon-box-left {
+  background: #333333;
+}
+
+.contact-form > label:hover .icon-box-right {
+  color: #333333;
+}
+
 .contact-form > label .icon-box {
   padding: 8px 12px;
 }
@@ -85,6 +97,11 @@ section .description span {
 .contact-form > label:focus-within .icon-box-left {
   background: #333333;
 }
+
+.icon-required i {
+  font-size: 0.8rem;
+}
+
 .contact-form > label:focus-within .icon-box-right,
 .contact-form > label:focus-within .icon-select-custom {
   color: #333333;
@@ -152,12 +169,13 @@ label select {
 }
 
 .btn-submit {
-  padding: 8px 28px;
+  padding: 4px;
+  height: 32px;
+  width: 100px;
   background-color: #ea3f33;
   color: #fff;
   outline: none;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -177,6 +195,11 @@ input[type="checkbox"] {
   background: #fff;
   text-align: center;
   margin-right: 4px;
+  cursor: pointer;
+}
+
+.checkbox-custom i {
+  display: none;
 }
 
 /* Handle toggle input type checkbox */
@@ -186,7 +209,7 @@ input[type="checkbox"] {
   input[type="checkbox"]:checked
   + .checkbox-custom
   i {
-  display: none;
+  display: inline;
 }
 
 /* Custom textarea */

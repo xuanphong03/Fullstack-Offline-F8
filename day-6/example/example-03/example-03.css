@@ -1,0 +1,23 @@
+/* 
+    thuộc tính width: thiết lập chiều rộng
+    thuộc tính height: thiết lập chiều cao
+    thuộc tính min-width: thiết lập chiều rộng nhỏ nhất
+    thuộc tính min-height: thiết lập chiều cao nhỏ nhất
+    thuộc tính max-width: thiết lập chiều rộng lớn nhất
+    thuộc tính max-height: thiết lập chiều cao lớn nhất
+*/
+
+/* 
+    Đơn vị: 
+    - vh (Viewport Height)
+    - vw (Viewport Width)
+    --> Tỷ lệ với viewport
+
+    Các thuộc tính kích thước chỉ hoạt động với thẻ block
+*/
+
+.box {
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+}

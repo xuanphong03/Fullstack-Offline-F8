@@ -1,0 +1,17 @@
+/* Thuộc tính background-attachment: scroll | fixed */
+
+body {
+  height: 2000px;
+}
+
+.banner {
+  height: 400px;
+  /* background-color: red;
+  background-image: url("https://picsum.photos/500/300?grayscale");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; */
+  /* background-attachment: scroll; */
+  background: red url("https://picsum.photos/500/300?grayscale") no-repeat fixed
+    0 0 / cover;
+}
