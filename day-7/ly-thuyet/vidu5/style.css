@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+/* Thuộc tính display: Thay đổi cách hiển thị của thẻ html
+- none: ẩn (mất không gian)
+- block: hiển thị kiểu block
+- inline: hiển thị kiểu inline
+- inline-block -> hiển thị kiểu inline và block
+
+*/
+
+.box {
+  display: block;
+}
+
+nav {
+  padding: 40px;
+}
+
+nav .menu-list {
+  width: 80%;
+  margin: 30px auto;
+  list-style: none;
+  font-size: 0;
+}
+
+nav .menu-list .menu-item {
+  font-size: initial;
+  display: inline-block;
+  background-color: green;
+}
+
+nav .menu-list .menu-item a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  font-size: initial;
+}
+
+/* nav .menu-list .menu-item:not(:last-of-type) a {
+  border-right: 1px solid #000;
+} */
+
+ul li + li a {
+  border-left: 1px solid #fff;
+}
+
+.menu-item a:hover {
+  background-color: red;
+}

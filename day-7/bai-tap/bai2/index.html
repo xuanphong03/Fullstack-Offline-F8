@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="login-section">
+      <div class="login-wrapper">
+        <input
+          hidden
+          id="toggle-just-log"
+          type="checkbox"
+          name="toggle-just-log"
+          value="toggle-just-log"
+        />
+
+        <article class="login-box-left">
+          <h2>Just Log</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eos
+            nemo ipsam consequuntur. Itaque eius molestiae, sit adipisci nobis
+            eveniet beatae pariatur ducimus consequatur blanditiis cumque animi,
+            temporibus eligendi ea!
+          </p>
+          <button>Read More</button>
+          <nav>
+            <ul>
+              <li>
+                <a href="#facebook"
+                  ><span><i class="fa-brands fa-facebook-f"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#twitter"
+                  ><span><i class="fa-brands fa-twitter"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#google"
+                  ><span><i class="fa-brands fa-google-plus-g"></i></span
+                ></a>
+              </li>
+              <li>
+                <a href="#linkedin"
+                  ><span><i class="fa-brands fa-linkedin"></i></span
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </article>
+        <article class="login-box-right">
+          <label for="toggle-just-log">
+            <span class="toggle-close"
+              ><i class="fa-solid fa-arrow-left"></i
+            ></span>
+            <span class="toggle-open"
+              ><i class="fa-solid fa-arrow-right"></i
+            ></span>
+          </label>
+          <h2>Login to <span>your account</span></h2>
+          <form>
+            <div class="input-field">
+              <input type="email" name="email" placeholder="Email Address" />
+            </div>
+            <div class="input-field">
+              <input type="password" name="password" placeholder="Password" />
+            </div>
+            <div class="option-wrapper">
+              <label class="remember-account">
+                <input
+                  type="checkbox"
+                  name="remember-account"
+                  value="remember-account"
+                />
+                Remember me
+              </label>
+              <a class="forgot-password" href="#forgot-password"
+                >Forgot Password</a
+              >
+            </div>
+            <button class="btn btn-login">LOGIN</button>
+          </form>
+          <p class="register-account">
+            Don't have an account? <a href="#register">Register here</a>
+          </p>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>

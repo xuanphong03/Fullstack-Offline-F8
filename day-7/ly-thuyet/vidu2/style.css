@@ -1,0 +1,14 @@
+/* 
+filter --> Tạo bộ lọc cho thẻ HTML
+- grayscale(number): Từ 0->1 hoặc 0->100%
+- opacity(number): Từ 0->1
+- blur(number + unit)
+*/
+
+.box {
+  color: red;
+}
+
+.box:hover {
+  filter: blur(1px);
+}

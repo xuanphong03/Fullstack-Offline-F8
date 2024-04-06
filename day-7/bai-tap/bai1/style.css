@@ -1,0 +1,131 @@
+:root {
+  --primary-color: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+.navbar-left {
+  list-style: none;
+  font-size: 0;
+}
+
+.nav-item {
+  position: relative;
+  font-size: initial;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-item:hover > a {
+  color: #fff;
+  background-color: #2da5da;
+}
+
+.navbar-left .nav-item {
+  border-right: 1px solid #ccc;
+}
+
+.icon-item {
+  font-size: 1.4rem;
+}
+
+.icon-item.icon-left {
+  margin-right: 12px;
+}
+
+.icon-item.icon-right {
+  margin-left: 6px;
+}
+
+.nav-item > a {
+  display: block;
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 10px 20px;
+}
+
+.nav-item .sub-menu {
+  display: none;
+  position: absolute;
+  min-width: 220px;
+  max-width: 300px;
+  left: 0;
+  top: 130%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nav-item .sub-menu::before {
+  position: absolute;
+  content: "";
+  border: 12px solid white;
+  border-color: transparent transparent white;
+  top: -24px;
+  left: 16px;
+}
+
+.nav-item .sub-menu::after {
+  position: absolute;
+  content: "";
+  background: transparent;
+  top: -24px;
+  left: 0;
+  right: 0;
+  height: 24px;
+}
+
+.nav-item:hover .sub-menu {
+  display: block;
+}
+
+.nav-item .sub-menu .sub-menu-list {
+  list-style: none;
+}
+
+.nav-item .sub-menu .sub-menu-list .sub-menu-item {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.nav-item .sub-menu .sub-menu-list .sub-menu-item:hover {
+  background-color: #2da5da;
+}
+.nav-item .sub-menu .sub-menu-list .sub-menu-item:hover > a {
+  color: #fff;
+}
+
+.nav-item .sub-menu .sub-menu-list .sub-menu-item:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-item .sub-menu .sub-menu-list .sub-menu-item > a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.navbar-right {
+  border-left: 1px solid #ccc;
+}
