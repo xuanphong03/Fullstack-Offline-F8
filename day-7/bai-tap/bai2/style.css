@@ -219,9 +219,10 @@ label[for="toggle-just-log"] {
   left: 0;
   transform: translateY(-50%) translateX(-50%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
 }
 
-.login-box-right .toggle-open {
+/* .login-box-right .toggle-open {
   display: none;
 }
 
@@ -234,4 +235,4 @@ input[name="toggle-just-log"]:checked ~ .login-box-right .toggle-close {
 }
 input[name="toggle-just-log"]:checked ~ .login-box-right .toggle-open {
   display: block;
-}
+} */
