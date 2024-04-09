@@ -21,6 +21,7 @@ body {
   background-image: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   font-size: 1.6rem;
   line-height: 1.5;
 }
@@ -69,6 +70,17 @@ button {
   margin-bottom: 24px;
 }
 
+.login-box-left h2 .logo {
+  display: inline-block;
+  color: var(--primary-color);
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
 .login-box-left p {
   text-align: center;
   color: #fff;
@@ -93,21 +105,24 @@ button {
   color: white;
 }
 
-.login-box-left nav ul {
+.login-box-left ul {
   display: flex;
   list-style: none;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.login-box-left nav ul li {
+.login-box-left ul li {
   margin: 0 8px;
 }
 
-.login-box-left nav ul li a {
+.login-box-left ul li a {
   border-radius: 4px;
-  display: block;
-  padding: 8px 16px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
   background: #ee3625;
   color: #fff;
 }
@@ -221,18 +236,3 @@ label[for="toggle-just-log"] {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
 }
-
-/* .login-box-right .toggle-open {
-  display: none;
-}
-
-input[name="toggle-just-log"]:checked ~ .login-box-left {
-  display: none;
-}
-
-input[name="toggle-just-log"]:checked ~ .login-box-right .toggle-close {
-  display: none;
-}
-input[name="toggle-just-log"]:checked ~ .login-box-right .toggle-open {
-  display: block;
-} */
