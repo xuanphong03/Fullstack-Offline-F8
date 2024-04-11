@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Asap", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.profile-wrapper {
+  position: relative;
+  height: 400px;
+  background-image: url("https://ircdn.vingroup.net/storage/Uploads/Photos/Landmark81banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 40%;
+}
+.blurred-background {
+  position: absolute;
+  inset: 0;
+  background-color: #0000004f;
+  z-index: 1;
+}
+.profile {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  display: flex;
+  height: 50%;
+  z-index: 2;
+}
+
+.profile .avatar {
+  height: 100%;
+  width: 250px;
+  background-color: #ffffff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.profile .avatar img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.profile .info {
+  position: relative;
+  width: 450px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.profile .info .name {
+  display: -webkit-box;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 2.8rem;
+}
+
+.profile .info .detail-info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  color: #ecedec;
+}
+
+.profile .info .detail-info span {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profile .info .detail-info p:first-child {
+  margin-right: 24px;
+}
+
+/* Phần navigation */
+.nav-list {
+  padding: 0 64px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.nav-list .nav-item {
+  position: relative;
+  text-transform: uppercase;
+}
+
+.nav-list .nav-item a {
+  color: #3f3424;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.nav-list .nav-item.active a,
+.nav-list .nav-item:hover a {
+  color: #bf4240;
+}
+
+.nav-list .nav-item.active a::after,
+.nav-list .nav-item:hover a::after {
+  position: absolute;
+  content: "";
+  width: calc(100% - 40px);
+  height: 4px;
+  background: #bf4240;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+}

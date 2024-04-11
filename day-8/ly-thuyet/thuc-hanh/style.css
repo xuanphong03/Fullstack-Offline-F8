@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modal-box {
+  display: none;
+  position: fixed;
+  inset: 0;
+}
+
+.modal {
+  width: 40%;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin: 100px auto;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+input:checked + .modal-box {
+  display: block;
+}
+
+.modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.modal .modal-header .close-btn {
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal .modal-header .close-btn:hover {
+  color: red;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0.5;
+}

@@ -1,0 +1,64 @@
+/* 
+    Counter CSS: Nhóm các thuộc tính để thực hiện đếm
+    - Tạo bộ đếm
+    - Đếm
+    - Hiển thị kết quả đếm
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 500px;
+  border: 1px solid red;
+}
+
+.container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+img {
+  float: left;
+  margin-right: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  shape-outside: circle();
+}
+
+body {
+  counter-reset: dem;
+}
+
+ul {
+  width: 300px;
+  margin: 30px auto;
+  list-style: none;
+  /* counter-reset: dem; */
+}
+
+ul li {
+  clear: both;
+  line-height: 1.5;
+  counter-increment: dem;
+}
+
+ul li::before {
+  /* content: attr(data-index); */
+  content: "#" counter(dem);
+  display: block;
+  background: green;
+  color: white;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
+}

@@ -1,0 +1,52 @@
+/* 
+Thuộc tính position: 
+- static: không có postion
+- relative: vị trí tương đối
+- absolute: vị trí tuyệt đối
+- fixed: vị trí cố định
+
+Khi sử dụng position trừ (static) thì nó sẽ có các thuộc tính 
+top, left, right, bottom, z-index, inset
+
+
+relative: Không thay đổi bố cục ban đầu, vị trí tương đối với chính nó
+absolute: thay đổi bố cục
+
+xếp chồng: position -> thứ tự HTML -> z-index
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 2000px;
+}
+
+.box {
+  border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.item {
+  padding: 10px 20px;
+  background: green;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 100px;
+}
+
+.item:nth-child(2) {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+}

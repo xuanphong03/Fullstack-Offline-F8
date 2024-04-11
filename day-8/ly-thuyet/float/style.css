@@ -1,0 +1,46 @@
+/* 
+ Thuộc tính float: Trôi các thẻ html về phía bên trái hoặc bên phải của thành phần cha
+ - none: mặc định
+ - left: trái
+ - right: phải
+
+ Thuộc tính clear: Ngăn các thẻ html tự động trôi theo float
+ Lưu ý: Ý hoạt động với thẻ block
+*/
+
+.box {
+  width: 300px;
+  /* height: 300px; */
+  border: 1px solid red;
+  margin: 30px auto;
+  /* overflow: auto; */
+}
+
+.box::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}
+
+.column-a {
+  width: 30%;
+  height: 100px;
+  background: green;
+  float: left;
+}
+
+.column-b {
+  width: 30%;
+  height: 150px;
+  background: blueviolet;
+  float: right;
+}
+
+h3 {
+  clear: right;
+  background: pink;
+}

@@ -1,0 +1,150 @@
+/* Reset CSS  */
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Asap", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+section {
+  margin: 10px 100px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  color: #4d3f2e;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h2::after {
+  content: "";
+  flex: 1;
+  display: inline-block;
+  border-bottom: 2px solid #ddd;
+  margin-left: 16px;
+}
+
+/* Cities list */
+.cities-list {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.cities-list .city-item {
+  margin-right: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cities-list .city-item a {
+  color: #4d3f2e;
+  display: inline-block;
+  background-color: #e4e4e4;
+  padding: 10px 20px;
+  border-radius: 99px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.15s linear;
+}
+
+.cities-list .city-item.active a,
+.cities-list .city-item:hover a {
+  color: #ffffff;
+  background-color: #af7c38;
+}
+.cities-list .city-item a .city-name {
+  font-size: 1.6rem;
+}
+
+.cities-list .city-item a .sales {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* Area list */
+
+.areas-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.areas-list .area-item {
+  width: 32%;
+  height: 250px;
+  background-color: #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  position: relative;
+  overflow: hidden;
+}
+
+.areas-list .area-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.areas-list .area-item:hover {
+  transform: scale(1.025);
+}
+
+.areas-list .area-item a {
+  text-decoration: none;
+}
+
+.areas-list .area-item .blurred-background {
+  position: absolute;
+  background-color: #0000003e;
+  height: 100%;
+  padding: 20px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.areas-list .area-item .info-box {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.areas-list .area-item .info-box .area-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.areas-list .area-item .info-box .detail-info {
+  color: #eeeeee;
+}
+
+.areas-list .area-item .info-box .detail-info span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 2rem;
+}
