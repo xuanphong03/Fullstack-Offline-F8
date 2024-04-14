@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: #fdfdfd;
+}
+
+.contact-section {
+  width: 750px;
+  margin: 50px auto;
+  padding: 10px 20px;
+}
+
+.contact-section h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.contact-section p {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Contact form */
+
+.contact-section .contact-form {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.contact-section .contact-form .input-field,
+.contact-section .contact-form .textarea-field {
+  position: relative;
+}
+
+.contact-section .contact-form .input-field,
+.contact-section .contact-form .select-field {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+.contact-section .contact-form .textarea-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-section .contact-form .input-field input {
+  padding: 15px 10px 5px;
+}
+
+.contact-section .contact-form .select-field select {
+  color: #757575;
+  padding: 10px 10px 10px 5px;
+}
+
+.contact-section .contact-form .textarea-field textarea {
+  padding: 20px 10px 10px;
+}
+
+.contact-section .contact-form .input-field input,
+.contact-section .contact-form .select-field select,
+.contact-section .contact-form .textarea-field textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.contact-section .contact-form .textarea-field textarea::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #757575;
+}
+
+.contact-section .contact-form .input-field label,
+.contact-section .contact-form .textarea-field label {
+  position: absolute;
+  left: 10px;
+  font-size: 1.4rem;
+  transition: top 0.1s ease-in-out;
+  color: #757575;
+}
+
+.contact-section .contact-form .input-field label {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact-section .contact-form .input-field input:focus ~ label,
+.contact-section
+  .contact-form
+  .input-field
+  input:not(:placeholder-shown)
+  ~ label {
+  font-size: 1rem;
+  top: 10px;
+}
+
+.contact-section .contact-form .textarea-field label {
+  top: 10px;
+}
+
+.contact-section .contact-form .textarea-field textarea:focus ~ label,
+.contact-section
+  .contact-form
+  .textarea-field
+  textarea:not(:placeholder-shown)
+  ~ label {
+  font-size: 1rem;
+  top: 5px;
+}
+
+.contact-section .contact-form .input-field input:focus,
+.contact-section .contact-form .textarea-field textarea:focus {
+  border: 1px solid #764cf4;
+}
+
+.contact-section .contact-form .select-field {
+  position: relative;
+  background-color: transparent;
+}
+
+.contact-section .contact-form .select-field select {
+  appearance: none;
+  font-size: 1.4rem;
+}
+
+.contact-section .contact-form .select-field label {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-section .contact-form .select-field select option:first-child {
+  color: #000;
+}
+
+.contact-section .contact-form .btn-submit {
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  border-radius: 99px;
+  background-color: #4d77d9;
+  color: #fff;
+  cursor: pointer;
+}

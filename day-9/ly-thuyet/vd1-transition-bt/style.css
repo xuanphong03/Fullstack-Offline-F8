@@ -1,0 +1,97 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.switch-toggle {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 40px;
+  background: gray;
+  border-radius: 99px;
+  margin: 50px auto;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.switch-toggle .circle-icon {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: inherit;
+  border: 3px solid gray;
+  transition: left 0.5s ease;
+}
+
+input:checked ~ .switch-toggle .circle-icon {
+  left: calc(100% - 40px);
+  border-color: blue;
+}
+
+input:checked ~ .switch-toggle::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: blue;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  position: relative;
+  color: green;
+  overflow: hidden;
+}
+
+h2 > span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 100%;
+  color: red;
+  transition: top 0.5s ease;
+  overflow: hidden;
+}
+
+h2 > span > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+h2:hover > span {
+  top: 0;
+}
+
+.bg-box {
+  position: relative;
+  width: 500px;
+  height: 50px;
+  border: 1px solid #000;
+}
+
+.bg-box .bg {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  transition: top 0.5s linear;
+}
+
+.bg-box:hover .bg {
+  top: 0;
+}

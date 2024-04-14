@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+section {
+  position: relative;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-item {
+  width: 600px;
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.event-content {
+  width: 400px;
+  text-align: right;
+  font-size: 1.4rem;
+}
+
+.event-content .event-heading {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.event-content .event-desc {
+  color: gray;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+.event-content .event-tag {
+  background-color: #ccc;
+  padding: 5px 10px;
+  border-radius: 99px;
+  transition: color 0.2s ease;
+}
+
+/* Dot icon */
+.line-box {
+  position: relative;
+  width: 1px;
+}
+
+.event-item .line-box .dot-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-item .line-box .dot-icon .dot-inside {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #44988a;
+}
+
+.event-item:not(:last-of-type) .line-box .vertical-line {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  background-color: #ccc;
+}
+
+/* Event time */
+.event-time {
+  width: 100px;
+  font-size: 1.4rem;
+}
+
+/* Background interview */
+.background-interview {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  width: 400px;
+  height: 400px;
+  background-image: url("https://www.newcomerscanada.ca/wp-content/uploads/2021/10/How-to-Prepare-for-Your-Job-Interview-in-Canada-scaled.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.background-outside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 400px;
+  background-image: url("https://media.licdn.com/dms/image/D5612AQEn_HuyJhsOig/article-cover_image-shrink_720_1280/0/1697039887588?e=2147483647&v=beta&t=9A89asrkolq3li53xr2JTyb76V5VIc8sfnT-q0yAIAg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.winning-awards-box {
+  position: absolute;
+  inset: 10px;
+  background-color: #455cb0;
+}
+
+.winning-awards-content {
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  text-align: right;
+}
+
+.winning-awards-content h3 {
+  font-size: 4.8rem;
+  font-weight: 900;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSql12cv8rf_AM9_wX_qiUTSL_o0nVXKM28th2YMNfuXQ&s");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.winning-awards-content span {
+  color: #fff;
+}
+
+/* Transition */
+.event-item:hover .event-content .event-tag {
+  color: #fff;
+  background-color: #a26f5a;
+}

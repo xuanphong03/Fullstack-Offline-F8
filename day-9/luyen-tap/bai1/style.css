@@ -1,0 +1,151 @@
+:root {
+  --width-mail-box: 400px;
+  --height-mail-box: 200px;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mail box */
+
+.mail-box {
+  position: relative;
+  width: var(--width-mail-box);
+  height: var(--height-mail-box);
+  background-color: #dd5147;
+  top: -100px;
+  transition: top 0.75s ease;
+}
+
+.mail-box:hover {
+  top: -50px;
+}
+
+.mail-box::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 0;
+  border-top: calc(var(--height-mail-box) / 2) solid transparent;
+  border-left: calc(var(--width-mail-box) / 2) solid #dd5147;
+  border-right: calc(var(--width-mail-box) / 2) solid #e45d53;
+  border-bottom: calc(var(--height-mail-box) / 2) solid #e45d53;
+  z-index: 2;
+}
+
+.mail-box .top-mail-box-open,
+.mail-box .top-email-box-close {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  border-top: calc(var(--height-mail-box) / 2) solid;
+  border-left: calc(var(--width-mail-box) / 2) solid transparent;
+  border-right: calc(var(--width-mail-box) / 2) solid transparent;
+  border-bottom: calc(var(--height-mail-box) / 2) solid transparent;
+  transform-origin: top;
+}
+
+.mail-box .top-mail-box-open {
+  border-top-color: #cc4a46;
+  transform: rotateX(90deg);
+  transition: transform 0.25s 0.25s linear;
+  z-index: 0;
+}
+
+.mail-box .top-email-box-close {
+  border-top-color: #cc4a46;
+  transform: rotateX(0deg);
+  transition: transform 0.25s 0.45s linear;
+  z-index: 2;
+}
+
+.mail-box:hover .top-mail-box-open {
+  transform: rotateX(180deg);
+  transition: transform 0.25s 0.25s linear;
+}
+
+.mail-box:hover .top-email-box-close {
+  transform: rotateX(90deg);
+  transition: transform 0.25s linear;
+}
+
+/* Mail */
+.mail {
+  position: absolute;
+  width: 70%;
+  inset: 0 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 1;
+  transition: top 0.25s 0s ease;
+  border: 1px solid #ccc;
+}
+
+.mail-box:hover .mail {
+  transition: top 0.25s 0.35s ease;
+  top: -40%;
+}
+
+/* Overlay */
+.overlay {
+  background: #000;
+  width: var(--width-mail-box);
+  height: 12px;
+  border-radius: 50%;
+  filter: blur(12px);
+}
+
+/* CSS cho lá thư */
+.mail .top-border-mail {
+  height: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.mail .top-border-mail .diagonal-line {
+  height: 100%;
+  width: 12.5%;
+  background-color: #bf585c;
+  transform: rotate(-45deg);
+}
+
+.mail .body-mail {
+  padding: 10px;
+}
+
+.mail .body-mail .horizontal-line {
+  height: 16px;
+  width: 25%;
+  background-color: #d4595e;
+  margin-bottom: 8px;
+}
+
+.mail .body-mail .horizontal-line:first-child {
+  width: 50%;
+}
+
+.mail .circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #efcccd;
+  right: 10%;
+  bottom: 45%;
+}
