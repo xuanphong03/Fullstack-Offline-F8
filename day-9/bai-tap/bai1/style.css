@@ -171,6 +171,7 @@ section {
 }
 
 .event-item:hover .event-content {
+  text-align: left;
   transform: translateX(calc(100% + 40px));
   transition: transform 0.5s ease;
 }

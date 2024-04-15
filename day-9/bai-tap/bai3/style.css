@@ -59,23 +59,21 @@ body {
   margin-bottom: 20px;
 }
 
+.contact-section .contact-form .textarea-field textarea,
 .contact-section .contact-form .input-field input {
-  padding: 15px 10px 5px;
+  padding: 20px 15px 10px;
 }
 
 .contact-section .contact-form .select-field select {
   color: #757575;
-  padding: 10px 10px 10px 5px;
-}
-
-.contact-section .contact-form .textarea-field textarea {
-  padding: 20px 10px 10px;
+  padding: 15px;
 }
 
 .contact-section .contact-form .input-field input,
 .contact-section .contact-form .select-field select,
 .contact-section .contact-form .textarea-field textarea {
   width: 100%;
+  font-size: 1.6rem;
   border-radius: 6px;
   border: 1px solid #ccc;
   outline: none;
@@ -90,8 +88,8 @@ body {
 .contact-section .contact-form .input-field label,
 .contact-section .contact-form .textarea-field label {
   position: absolute;
-  left: 10px;
-  font-size: 1.4rem;
+  left: 15px;
+  font-size: 1.6rem;
   transition: top 0.1s ease-in-out;
   color: #757575;
 }
@@ -112,7 +110,7 @@ body {
 }
 
 .contact-section .contact-form .textarea-field label {
-  top: 10px;
+  top: 15px;
 }
 
 .contact-section .contact-form .textarea-field textarea:focus ~ label,
@@ -137,7 +135,6 @@ body {
 
 .contact-section .contact-form .select-field select {
   appearance: none;
-  font-size: 1.4rem;
 }
 
 .contact-section .contact-form .select-field label {
@@ -157,6 +154,7 @@ body {
 .contact-section .contact-form .btn-submit {
   margin: 0 auto;
   padding: 10px 20px;
+  font-size: 1.6rem;
   border: 0;
   outline: 0;
   border-radius: 99px;
