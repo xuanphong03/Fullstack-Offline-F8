@@ -44,9 +44,9 @@ section {
 }
 
 .event-content .event-heading {
-  font-family: "Space Grotesk", sans-serif;
   font-size: 2.4rem;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .event-content .event-desc {
@@ -59,7 +59,13 @@ section {
   background-color: #ccc;
   padding: 5px 10px;
   border-radius: 99px;
+  font-weight: 600;
   transition: color 0.2s ease;
+}
+
+.event-content .event-heading,
+.event-content .event-tag {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 /* Dot icon */
