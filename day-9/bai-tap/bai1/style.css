@@ -76,7 +76,7 @@ section {
 
 .event-item .line-box .dot-icon {
   position: absolute;
-  top: 0;
+  top: 8px;
   left: 0;
   transform: translateX(-50%);
   width: 20px;
@@ -97,7 +97,7 @@ section {
 
 .event-item:not(:last-of-type) .line-box .vertical-line {
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: 0;
   width: inherit;
   height: 100%;
@@ -106,6 +106,8 @@ section {
 
 /* Event time */
 .event-time {
+  display: block;
+  margin-top: 8px;
   width: 100px;
   font-size: 1.4rem;
   transition: transform 0.5s 0.15s ease;
@@ -151,7 +153,8 @@ section {
   text-align: right;
 }
 
-.winning-awards-content h3 {
+.winning-awards-content span:first-child {
+  display: block;
   font-size: 4.8rem;
   font-weight: 900;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSql12cv8rf_AM9_wX_qiUTSL_o0nVXKM28th2YMNfuXQ&s");
@@ -160,7 +163,7 @@ section {
   color: transparent;
 }
 
-.winning-awards-content span {
+.winning-awards-content span:last-child {
   color: #fff;
 }
 
@@ -172,7 +175,7 @@ section {
 
 .event-item:hover .event-content {
   text-align: left;
-  transform: translateX(calc(100% + 40px));
+  transform: translateX(calc(100% + 50px));
   transition: transform 0.5s ease;
 }
 

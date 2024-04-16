@@ -89,9 +89,9 @@ body {
 .contact-section .contact-form .textarea-field label {
   position: absolute;
   left: 15px;
-  font-size: 1.6rem;
-  transition: top 0.1s ease-in-out;
   color: #757575;
+  font-size: 1.6rem;
+  transition: top 0.25s linear;
 }
 
 .contact-section .contact-form .input-field label {
