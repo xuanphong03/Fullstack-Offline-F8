@@ -1,0 +1,65 @@
+/* 
+    Transform: Thay đổi hình dạng của 1 thẻ html: xoay, nghiêng, di chuyển, phóng to/ thu nhỏ
+
+    Syntax: transform: value
+    - rotate(angle)
+    - rotateX(angle)
+    - rotateY(angle)
+    - scale(x,y)
+    - skew(angle)
+    - translate(x,y)
+    - translateX
+    - translateY
+
+    Các thuộc tính tách ra: 
+    - rotate --> transform: rotate
+    - skew --> transform: skew
+    - translate --> transform: translate
+
+    Thuộc tính transform-origin: x y -> Chọn vị trí của trục khi thực hiện transform và 
+    các giá trị giống y hệt thuộc tính background-position
+*/
+
+.container {
+  padding: 50px;
+  border: 1px solid red;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  margin: 30px auto;
+  transition: all 0.5s ease;
+  transform-origin: 0 0;
+  background-color: green;
+}
+
+.container:hover .box {
+  transform: rotate(90deg);
+}
+
+/* .container:hover .box::after {
+  background-color: blue;
+}
+
+.container:hover .box {
+  transform: translateX(50%);
+}
+
+.container .box::after {
+  position: absolute;
+  inset: 0;
+  transform: skew(-45deg);
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: -1;
+} */

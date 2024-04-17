@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-box">
+        <h1>#1 burger menu</h1>
+        <p class="desc-box">
+          <span class="desc-inspired">inspired by</span>
+          google material design
+        </p>
+      </div>
+      <input type="checkbox" name="toggle-navbar" id="toggle-navbar" hidden />
+      <div class="navbar-box">
+        <div class="icon-box">
+          <label for="toggle-navbar" class="icon icon-menu"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <label for="toggle-navbar" class="icon icon-back"
+            ><i class="fa-solid fa-arrow-right"></i
+          ></label>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <input type="radio" id="home" name="navbar" value="home" hidden />
+              <label for="home">home</label>
+            </li>
+            <li class="nav-item">
+              <input
+                type="radio"
+                id="about"
+                name="navbar"
+                value="about"
+                hidden
+              />
+              <label for="about">about</label>
+            </li>
+            <li class="nav-item">
+              <input
+                type="radio"
+                id="portfolio"
+                name="navbar"
+                value="portfolio"
+                hidden
+              />
+              <label for="portfolio">portfolio</label>
+            </li>
+            <li class="nav-item">
+              <input
+                type="radio"
+                id="contact"
+                name="navbar"
+                value="contact"
+                hidden
+              />
+              <label for="contact">contact</label>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

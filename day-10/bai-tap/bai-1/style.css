@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: #34aef7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.container {
+  position: relative;
+  background: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.content-box {
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 50px;
+  text-align: right;
+}
+
+.content-box h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.content-box .desc-box {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.content-box .desc-box .desc-inspired {
+  font-size: 1.6rem;
+  margin-right: 10px;
+}
+
+.navbar-box {
+  position: fixed;
+  background-color: #fff;
+  inset: 0;
+  width: 70px;
+  height: 70px;
+  border-bottom-right-radius: 999px;
+  transition: all 0.75s ease;
+  overflow: hidden;
+}
+
+input[name="toggle-navbar"]:checked ~ .navbar-box {
+  width: 2500px;
+  height: 2500px;
+}
+
+.navbar-box .icon-box {
+  position: relative;
+  font-size: 2.4rem;
+  height: 40px;
+  width: 40px;
+  margin: 6px;
+}
+
+.navbar-box .icon-box .icon {
+  position: absolute;
+  color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon.icon-menu {
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.icon.icon-back {
+  visibility: hidden;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+input[id="toggle-navbar"]:checked ~ .navbar-box .icon-box .icon.icon-menu {
+  visibility: hidden;
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+input[id="toggle-navbar"]:checked ~ .navbar-box .icon-box .icon.icon-back {
+  visibility: visible;
+  transform: rotate(180deg);
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+input[id="toggle-navbar"]:checked ~ .navbar-box nav {
+  visibility: visible;
+}
+
+.navbar-box nav {
+  width: 250px;
+  margin-top: 20px;
+  visibility: hidden;
+}
+
+.navbar-box nav .nav-list {
+  list-style: none;
+}
+
+.navbar-box nav .nav-list .nav-item {
+  margin-bottom: 10px;
+}
+
+.navbar-box nav .nav-list .nav-item label {
+  display: block;
+  color: var(--primary-color);
+  padding: 10px 50px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navbar-box nav .nav-list .nav-item input[name="navbar"]:checked + label {
+  color: #000;
+  background-color: #ccc;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}

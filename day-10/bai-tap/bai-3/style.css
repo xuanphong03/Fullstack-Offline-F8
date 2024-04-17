@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: rgb(49, 54, 66);
+}
+
+/* Letter wrapper */
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 200px auto 0;
+}
+
+.letter-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(198, 82, 68);
+  top: -50%;
+  transition: top 1s ease;
+}
+
+.letter-wrapper::before {
+  position: absolute;
+  content: "";
+  display: block;
+  inset: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid rgb(216, 85, 73);
+  border-right: 100px solid rgb(227, 100, 86);
+  border-bottom: 50px solid rgb(207, 91, 79);
+  z-index: 2;
+}
+
+.letter-top-edge {
+  position: absolute;
+  content: "";
+  display: block;
+  inset: 0;
+  border-top: 50px solid rgb(202, 79, 64);
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 50px solid transparent;
+  transform-origin: top;
+  transition: all 1s 0.5s ease;
+  z-index: 2;
+}
+
+/* Letter */
+
+.letter {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 1;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.letter .border-top {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  margin: 0 5px;
+}
+
+.letter .border-top .diagonal-line {
+  width: 8px;
+  height: 40px;
+  background-color: rgb(193, 91, 91);
+  margin-right: 10px;
+  transform: rotate(40deg);
+}
+
+.letter .horizontal-line {
+  height: 10px;
+  background-color: rgb(193, 91, 91);
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.letter .horizontal-line.long-line {
+  width: 80px;
+}
+
+.letter .circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  top: 70px;
+  border-radius: 50%;
+  background-color: rgb(236, 206, 208);
+}
+
+/* Shadow */
+.shadow-box {
+  position: relative;
+  margin: 10px auto 0;
+  width: 150px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(37, 39, 48);
+  filter: blur(5px);
+  transition: all 1s ease;
+}
+
+/* Transition */
+.container:hover .letter-wrapper {
+  top: -10%;
+}
+
+.container:hover .letter-wrapper .letter-top-edge {
+  transform: rotateX(180deg);
+  z-index: 0;
+  transition: all 1s ease;
+}
+
+.container:hover .letter-wrapper .letter {
+  top: -70%;
+  transition: all 0.5s 0.75s ease;
+}
+
+.container:hover .shadow-box {
+  width: 200px;
+}
