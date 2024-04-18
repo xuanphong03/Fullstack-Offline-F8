@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  width: 500px;
+  width: 800px;
   margin: 100px auto;
   border: 1px solid #ccc;
 }
@@ -34,6 +34,7 @@ body {
 
 .nav-list .nav-item {
   width: 25%;
+  padding: 4px;
 }
 
 .nav-list .nav-item:not(:last-child) {
@@ -41,18 +42,16 @@ body {
 }
 
 .nav-list .nav-item label {
-  display: block;
-  padding: 4px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: 100%;
   cursor: pointer;
-  text-align: center;
 }
 
-.nav-list .nav-item label span {
-  display: block;
-  padding: 10px 20px;
-}
-
-.nav-list .nav-item:hover label span {
+.nav-list .nav-item:hover label {
   color: #fff;
   background-color: rgb(65, 153, 217);
   transition: all 0.2s linear;
@@ -79,41 +78,17 @@ body {
   height: 200px;
 }
 
-input[value="item-1"]:checked ~ nav label[for="item-1"] span {
-  color: #fff;
-  background-color: rgb(65, 153, 217);
-}
-input[value="item-2"]:checked ~ nav label[for="item-2"] span {
-  color: #fff;
-  background-color: rgb(65, 153, 217);
-}
-input[value="item-3"]:checked ~ nav label[for="item-3"] span {
-  color: #fff;
-  background-color: rgb(65, 153, 217);
-}
-input[value="item-4"]:checked ~ nav label[for="item-4"] span {
+input[value="item-1"]:checked ~ nav label[for="item-1"],
+input[value="item-2"]:checked ~ nav label[for="item-2"],
+input[value="item-3"]:checked ~ nav label[for="item-3"],
+input[value="item-4"]:checked ~ nav label[for="item-4"] {
   color: #fff;
   background-color: rgb(65, 153, 217);
 }
 
-input[value="item-1"]:checked ~ .article-list .article-item.article-1 {
-  visibility: visible;
-  transform: rotateX(0deg);
-  opacity: 1;
-  transition: all 1s 0.5s ease;
-}
-input[value="item-2"]:checked ~ .article-list .article-item.article-2 {
-  visibility: visible;
-  transform: rotateX(0deg);
-  opacity: 1;
-  transition: all 1s 0.5s ease;
-}
-input[value="item-3"]:checked ~ .article-list .article-item.article-3 {
-  visibility: visible;
-  transform: rotateX(0deg);
-  opacity: 1;
-  transition: all 1s 0.5s ease;
-}
+input[value="item-1"]:checked ~ .article-list .article-item.article-1,
+input[value="item-2"]:checked ~ .article-list .article-item.article-2,
+input[value="item-3"]:checked ~ .article-list .article-item.article-3,
 input[value="item-4"]:checked ~ .article-list .article-item.article-4 {
   visibility: visible;
   transform: rotateX(0deg);

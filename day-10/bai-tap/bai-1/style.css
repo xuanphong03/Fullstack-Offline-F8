@@ -133,15 +133,17 @@ input[id="toggle-navbar"]:checked ~ .navbar-box nav {
   margin-bottom: 10px;
 }
 
-.navbar-box nav .nav-list .nav-item label {
+.navbar-box nav .nav-list .nav-item a {
   display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--primary-color);
   padding: 10px 50px;
+  text-decoration: none;
   cursor: pointer;
-  font-weight: 600;
 }
 
-.navbar-box nav .nav-list .nav-item input[name="navbar"]:checked + label {
+.navbar-box nav .nav-list .nav-item a:focus {
   color: #000;
   background-color: #ccc;
   border-top-right-radius: 4px;
