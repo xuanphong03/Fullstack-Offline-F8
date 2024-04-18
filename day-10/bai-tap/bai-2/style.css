@@ -58,10 +58,15 @@ body {
   transition: all 0.2s linear;
 }
 
+.article-list {
+  position: relative;
+  inset: 0;
+}
+
 .article-item {
   visibility: hidden;
   position: absolute;
-  top: 55px;
+  top: 0;
   left: 0;
   right: 0;
   transform-origin: top;
@@ -74,14 +79,44 @@ body {
   height: 200px;
 }
 
-input[name="navbar"]:checked ~ .article-item {
+input[value="item-1"]:checked ~ nav label[for="item-1"] span {
+  color: #fff;
+  background-color: rgb(65, 153, 217);
+}
+input[value="item-2"]:checked ~ nav label[for="item-2"] span {
+  color: #fff;
+  background-color: rgb(65, 153, 217);
+}
+input[value="item-3"]:checked ~ nav label[for="item-3"] span {
+  color: #fff;
+  background-color: rgb(65, 153, 217);
+}
+input[value="item-4"]:checked ~ nav label[for="item-4"] span {
+  color: #fff;
+  background-color: rgb(65, 153, 217);
+}
+
+input[value="item-1"]:checked ~ .article-list .article-item.article-1 {
   visibility: visible;
   transform: rotateX(0deg);
   opacity: 1;
   transition: all 1s 0.5s ease;
 }
-
-input[name="navbar"]:checked ~ label span {
-  color: #fff;
-  background-color: rgb(65, 153, 217);
+input[value="item-2"]:checked ~ .article-list .article-item.article-2 {
+  visibility: visible;
+  transform: rotateX(0deg);
+  opacity: 1;
+  transition: all 1s 0.5s ease;
+}
+input[value="item-3"]:checked ~ .article-list .article-item.article-3 {
+  visibility: visible;
+  transform: rotateX(0deg);
+  opacity: 1;
+  transition: all 1s 0.5s ease;
+}
+input[value="item-4"]:checked ~ .article-list .article-item.article-4 {
+  visibility: visible;
+  transform: rotateX(0deg);
+  opacity: 1;
+  transition: all 1s 0.5s ease;
 }
