@@ -73,9 +73,9 @@ body {
   opacity: 0;
   overflow-x: scroll;
   padding: 10px 20px;
-  transition: all 1s ease;
   background-color: #fff;
   height: 200px;
+  transition: all 1s ease;
 }
 
 input[value="item-1"]:checked ~ nav label[for="item-1"],
@@ -93,5 +93,4 @@ input[value="item-4"]:checked ~ .article-list .article-item.article-4 {
   visibility: visible;
   transform: rotateX(0deg);
   opacity: 1;
-  transition: all 1s 0.5s ease;
 }
