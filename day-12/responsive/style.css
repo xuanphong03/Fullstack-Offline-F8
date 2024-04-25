@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: red;
+}
+
+@media screen and (max-width: 1399.98px) {
+  body {
+    color: green;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  body {
+    color: blueviolet;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    color: yellow;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    color: black;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  body {
+    color: violet;
+  }
+}

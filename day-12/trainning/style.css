@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 10px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 100px;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header nav .nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 12px;
+}
+
+header nav .nav-list .nav-item a {
+  display: block;
+  font-size: 1.8rem;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+header nav .nav-list .nav-item a:hover {
+  color: rgb(205, 94, 94);
+}
+
+header nav .btn-contact {
+  display: block;
+  padding: 5px 20px;
+  margin-left: 12px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #75b7eb;
+  font-weight: 600;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+header nav .btn-contact:hover {
+  color: #75b7eb;
+  border: 1px solid #75b7eb;
+  background-color: #fff;
+}
+
+header nav .btn-menu {
+  display: none;
+  cursor: pointer;
+}
+
+header nav .btn-menu .menu-icon {
+  font-size: 2.8rem;
+}
+
+.overlay-bg {
+  position: fixed;
+  inset: 0;
+  background-color: #0000003c;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+input[type="checkbox"]:checked ~ .overlay-bg {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1399.98px) {
+}
+
+@media screen and (max-width: 1199.98px) {
+}
+
+@media screen and (max-width: 991.98px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  header {
+    padding: 10px 20px;
+  }
+
+  header nav .btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+  }
+
+  header nav .nav-list {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    padding: 20px;
+    color: #fff;
+    opacity: 0;
+    background-color: #000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 2;
+  }
+
+  header nav .nav-list .nav-item a {
+    display: block;
+    padding: 5px 10px;
+    color: #fff;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+
+  input[type="checkbox"]:checked ~ header nav .nav-list {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  header nav .btn-contact {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+}

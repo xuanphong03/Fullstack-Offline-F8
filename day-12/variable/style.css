@@ -1,0 +1,35 @@
+:root {
+  --primary-color: yellow;
+  --secondary-color: green;
+  --font-size: 16px;
+  --text-color: #333;
+}
+
+body {
+  color: var(--text-color);
+  font-size: var(--font-size);
+}
+
+h1 {
+  color: var(--secondary-color);
+}
+
+.box {
+  --background-color: gray;
+  --font-style: italic;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: var(--background-color);
+  height: 500px;
+  transition: height 0.35s ease;
+}
+
+.box h2 {
+  font-style: var(--font-style);
+}
+
+h1:hover ~ .box {
+  --background-color: blue;
+  height: 0;
+}
