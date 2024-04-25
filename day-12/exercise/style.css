@@ -845,7 +845,7 @@ body {
     height: 0;
     display: block;
     overflow: hidden;
-    transition: all 0.35 s ease;
+    transition: all 0.35s ease;
     padding: 5px 10px;
   }
 
