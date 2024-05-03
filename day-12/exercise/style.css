@@ -379,7 +379,7 @@ body {
 .delivery-section-content .service-list .service-item .service-bg {
   position: absolute;
   top: 10px;
-  left: 35px;
+  left: 55px;
   width: calc(75% + 10px);
   height: calc(100%);
   background-color: var(--primary-color);
@@ -645,11 +645,12 @@ body {
 }
 
 #footer .footer-bottom {
+  max-width: var(--max-width-wrapper);
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: end;
   height: 85px;
-  margin: var(--margin-left-right);
   padding-bottom: 30px;
   border-top: 1px solid #eedcdc;
 }
@@ -827,7 +828,7 @@ body {
   }
 }
 
-@media screen and (max-width: 992.98px) {
+@media screen and (max-width: 991.98px) {
   :root {
     --max-width-wrapper: 720px;
   }
@@ -930,18 +931,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767.98px) {
-  :root {
-    --max-width-wrapper: 540px;
-  }
-
-  h1,
-  h2,
-  h5,
-  p {
-    text-align: center;
-  }
-
+@media screen and (max-width: 990.98px) {
   #header .header-navbar .menu-box {
     align-items: center;
   }
@@ -962,6 +952,52 @@ body {
   #header .header-navbar .menu-box .search-wrapper {
     width: fit-content;
     margin: 0 auto;
+  }
+
+  /* App*/
+  #groceries-app-section .section-wrapper .section-content .btn-box {
+    gap: 40px;
+  }
+  /* Footer */
+  #footer .footer-wrapper {
+    align-items: center;
+  }
+  #footer .footer-wrapper .footer-desc .img-box {
+    text-align: center;
+  }
+
+  #footer .footer-wrapper .footer-desc .desc,
+  #footer .footer-wrapper .get-in-touch-box p {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  #footer .footer-wrapper .footer-desc,
+  #footer .footer-wrapper .linking-box,
+  #footer .footer-wrapper .get-in-touch-box,
+  #footer .footer-wrapper .linking-box ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer .footer-bottom {
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  :root {
+    --max-width-wrapper: 540px;
+  }
+
+  h1,
+  h2,
+  h5,
+  p {
+    text-align: center;
   }
 
   #delivery-section-box .delivery-section-content .service-list {
@@ -1035,35 +1071,23 @@ body {
   #groceries-app-section .section-wrapper .section-content .btn-box {
     justify-content: center;
   }
-
-  #footer .footer-wrapper {
-    align-items: center;
+  /* Footer */
+  #footer .footer-bottom .copyright {
+    text-align: left;
   }
-  #footer .footer-wrapper .footer-desc .img-box {
+  #footer .footer-bottom .condition-list {
+    justify-content: end;
+  }
+  #footer .footer-bottom .copyright,
+  #footer .footer-bottom .condition-list {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 766.98px) {
+  #footer .footer-bottom .copyright {
     text-align: center;
   }
-
-  #footer .footer-wrapper .footer-desc .desc,
-  #footer .footer-wrapper .get-in-touch-box p {
-    max-width: 100%;
-    text-align: center;
-    font-size: 1.4rem;
-  }
-
-  #footer .footer-wrapper .footer-desc,
-  #footer .footer-wrapper .linking-box,
-  #footer .footer-wrapper .get-in-touch-box,
-  #footer .footer-wrapper .linking-box ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #footer .footer-bottom {
-    flex-wrap: wrap;
-    padding-top: 20px;
-  }
-
   #footer .footer-bottom .copyright,
   #footer .footer-bottom .condition-list {
     width: 100%;
