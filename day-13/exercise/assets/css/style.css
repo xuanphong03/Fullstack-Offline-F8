@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+:root {
+  --input-focused-color: #007bff;
+  --gray: #adafca;
+  --text-color: #3e3f5e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rajdhani", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Start: Customize khi selection */
+
+::selection {
+  background: #23d2e2;
+  color: #fff;
+}
+::-moz-selection {
+  background: #23d2e2;
+  color: #fff;
+}
+::-webkit-selection {
+  background: #23d2e2;
+  color: #fff;
+}
+/* End: Customize khi selection  */
+
+#login-page {
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  position: fixed;
+  inset: 0;
+  background-image: url("../imgs/landing-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
+}
+
+#login-page .bg-dotted {
+  position: absolute;
+  top: -20%;
+  right: -32%;
+  width: 64%;
+  height: 140%;
+  border-radius: 50%;
+  background: url("../imgs/dot-texture.png") repeat 0 0 #fff;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Start: Landing information */
+
+#login-page .landing-info {
+  position: absolute;
+  top: 16%;
+  left: 13%;
+  width: 584px;
+}
+
+#login-page .landing-info .landing-info-title-prev {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-top: 36px;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+#login-page .landing-info .landing-info-title {
+  position: relative;
+  top: -10px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 10.8rem;
+  font-weight: 900;
+  line-height: 10.4rem;
+  text-align: center;
+}
+
+#login-page .landing-info .landing-info-title-prev,
+#login-page .landing-info .landing-info-title {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#login-page .landing-info .landing-info-desc {
+  width: 384px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-align: center;
+  margin: 30px auto 0;
+}
+
+#login-page .landing-info .tab-switch-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  border-radius: 8px;
+}
+
+#login-page .landing-info .tab-switch-btn .btn {
+  width: 180px;
+  height: 54px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  transform-origin: color, background;
+}
+
+#login-page .landing-info .tab-switch-btn .btn.btn-login {
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+#login-page .landing-info .tab-switch-btn .btn.btn-register {
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+input[id="option-login"]:checked
+  ~ #wrapper-content
+  .landing-info
+  .tab-switch-btn
+  .btn.btn-login,
+input[id="option-register"]:checked
+  ~ #wrapper-content
+  .landing-info
+  .tab-switch-btn
+  .btn.btn-register {
+  color: #000;
+  background-color: #fff;
+}
+/* End: Landing information */
+
+/* Start: Form  */
+#login-page .landing-form {
+  position: absolute;
+  top: 0;
+  right: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 484px;
+  height: 100%;
+}
+
+#login-page .landing-form .form-box {
+  position: absolute;
+  background-color: #fff;
+  width: 484px;
+  border-radius: 12px;
+  padding: 64px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+#login-page .landing-form .form-box.form-login {
+  left: 0;
+}
+
+#login-page .landing-form .form-box.form-register {
+  left: 100%;
+}
+
+input[id="option-login"]:checked
+  ~ #wrapper-content
+  .landing-form
+  .form-box.form-login,
+input[id="option-register"]:checked
+  ~ #wrapper-content
+  .landing-form
+  .form-box.form-register {
+  left: 0;
+  opacity: 1;
+}
+
+input[id="option-login"]:not(:checked)
+  ~ #wrapper-content
+  .landing-form
+  .form-box.form-login,
+input[id="option-register"]:not(:checked)
+  ~ #wrapper-content
+  .landing-form
+  .form-box.form-register {
+  left: 100%;
+  opacity: 0;
+}
+
+#login-page .landing-form .form-box .icon-rocket {
+  position: absolute;
+  left: 0;
+  transform: translate(-50%, -40%);
+}
+
+#login-page .landing-form .form-box.form-login .icon-rocket {
+  top: 0;
+}
+#login-page .landing-form .form-box.form-register .icon-rocket {
+  top: 56px;
+}
+
+#login-page .landing-form .form-box .form-title {
+  font-size: 2.6rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+#login-page .landing-form .form-box form {
+  width: 100%;
+  margin-top: 76px;
+}
+
+#login-page .landing-form .form-box form .input-box {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 28px;
+}
+
+#login-page .landing-form .form-box form .input-box input {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  left: 0;
+  padding: 0 18px;
+  font-size: 1.6rem;
+  transform: translateY(-50%);
+  width: 100%;
+  border: 1px solid #dedeea;
+  border-radius: inherit;
+  transition: border-color 0.2s ease-in-out;
+  font-weight: 600;
+}
+
+#login-page .landing-form .form-box form .input-box label {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  cursor: text;
+  color: var(--gray);
+  font-weight: 600;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+#login-page .landing-form .form-box form .input-box input:focus {
+  border-color: var(--input-focused-color);
+}
+
+#login-page .landing-form .form-box form .input-box input:focus + label {
+  top: 0;
+  font-size: 1.2rem;
+  padding: 0 4px;
+}
+
+#login-page .landing-form .form-box form .other-options-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 28px;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  .checkbox-input {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  label
+  .checkbox-icon {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #dedeea;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  .checkbox-input
+  .checkbox-icon::before,
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  .checkbox-input
+  .checkbox-icon::after {
+  position: absolute;
+  content: "";
+  width: 65%;
+  height: 3px;
+  top: 50%;
+  background-color: #fff;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  .checkbox-input
+  .checkbox-icon::before {
+  left: 50%;
+  transform: translate(-45%, 100%);
+  rotate: 45deg;
+  background-color: #fff;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  .checkbox-input
+  .checkbox-icon::after {
+  right: 50%;
+  transform: translate(45%, 100%);
+  rotate: -45deg;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  .checkbox-input
+  input[type="checkbox"]:checked
+  ~ .checkbox-icon {
+  background-color: #23d2e2;
+  border-color: #23d2e2;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  .forgot-password
+  a {
+  color: #adafca;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  form
+  .other-options-wrapper
+  .forgot-password
+  a:hover {
+  color: #23d2e2;
+}
+
+#login-page .landing-form .form-box form .btn {
+  height: 54px;
+  line-height: 54px;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #615dfa;
+  cursor: pointer;
+  margin-bottom: 28px;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#login-page .landing-form .form-box form .btn.btn-login {
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+
+  background-color: #615dfa;
+}
+
+#login-page .landing-form .form-box form .btn.btn-login:hover {
+  background-color: #5753e4;
+}
+
+#login-page .landing-form .form-box form .btn.btn-register {
+  box-shadow: 4px 7px 12px 0 rgba(35, 210, 226, 0.2);
+  background-color: #23d2e2;
+}
+
+#login-page .landing-form .form-box form .btn.btn-register:hover {
+  background-color: #1bc5d4;
+}
+
+#login-page .landing-form .form-box .login-by-socials .lined-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+#login-page .landing-form .form-box .login-by-socials .lined-text::before,
+#login-page .landing-form .form-box .login-by-socials .lined-text::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background-color: #eaeaf5;
+}
+
+#login-page .landing-form .form-box .login-by-socials .social-links-list {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+#login-page .landing-form .form-box .login-by-socials .social-links-list a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  .login-by-socials
+  .social-links-list
+  a[href="#facebook"] {
+  background-color: #3763d2;
+}
+#login-page
+  .landing-form
+  .form-box
+  .login-by-socials
+  .social-links-list
+  a[href="#twitter"] {
+  background-color: #1abcff;
+}
+#login-page
+  .landing-form
+  .form-box
+  .login-by-socials
+  .social-links-list
+  a[href="#twitch"] {
+  background-color: #7b5dfa;
+}
+#login-page
+  .landing-form
+  .form-box
+  .login-by-socials
+  .social-links-list
+  a[href="#youtube"] {
+  background-color: #fd434f;
+}
+
+#login-page .landing-form .form-box .form-policy {
+  font-size: 1.4rem;
+}
+#login-page .landing-form .form-box .form-policy a {
+  text-decoration: none;
+  color: #23d2e2;
+  font-weight: 600;
+}
+/* End: Form */
+
+/* Responsive */
+@media screen and (max-width: 1500px) {
+  #login-page .landing-info {
+    left: 6%;
+  }
+  #login-page .landing-form {
+    right: 80px;
+  }
+  #login-page .bg-dotted {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1364px) {
+  #login-page {
+    padding: 80px 0 100px;
+    position: static;
+  }
+  #login-page .landing-info {
+    position: static;
+    width: 100%;
+  }
+  #login-page .landing-info .landing-info-desc {
+    display: none;
+  }
+  #login-page .landing-info .tab-switch-btn {
+    margin-top: 40px;
+  }
+
+  #login-page .landing-form {
+    display: block;
+    position: static;
+    width: 100%;
+    margin-top: 80px;
+  }
+  #login-page .landing-form .form-box {
+    position: static;
+    margin: 0 auto;
+    display: none;
+  }
+  #login-page .landing-form .form-box.form-login .icon-rocket,
+  #login-page .landing-form .form-box.form-register .icon-rocket {
+    display: none;
+  }
+  input[id="option-login"]:checked
+    ~ #wrapper-content
+    .landing-form
+    .form-box.form-login,
+  input[id="option-register"]:checked
+    ~ #wrapper-content
+    .landing-form
+    .form-box.form-register {
+    display: block;
+  }
+}
