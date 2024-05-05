@@ -37,6 +37,12 @@
       <div id="wrapper-content">
         <!-- Start: Landing information -->
         <div class="landing-info">
+          <div class="logo">
+            <img
+              src="https://pngimg.com/d/viking_PNG3.png"
+              alt="logo vikinger"
+            />
+          </div>
           <h2 class="landing-info-title-prev">Welcome to</h2>
           <h1 class="landing-info-title">Vikinger</h1>
           <p class="landing-info-desc">
@@ -65,7 +71,13 @@
             <h2 class="form-title">Account Login</h2>
             <form>
               <div class="input-box">
-                <input id="login-username" type="text" name="login-username" />
+                <input
+                  id="login-username"
+                  type="text"
+                  name="login-username"
+                  placeholder=""
+                  required
+                />
                 <label for="login-username">Username or Email</label>
               </div>
               <div class="input-box">
@@ -73,6 +85,8 @@
                   id="login-password"
                   type="password"
                   name="login-password"
+                  placeholder=""
+                  required
                 />
                 <label for="login-password">Password</label>
               </div>
@@ -82,7 +96,7 @@
                     type="checkbox"
                     id="remember-account"
                     name="remember-account"
-                    value="remember-account"
+                    value="true"
                     checked
                     hidden
                   />
@@ -123,15 +137,33 @@
             <h2 class="form-title">Create your Account!</h2>
             <form>
               <div class="input-box">
-                <input id="email" type="email" name="email" />
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  placeholder=""
+                />
                 <label for="email">Your Email</label>
               </div>
               <div class="input-box">
-                <input id="username" type="text" name="username" />
+                <input
+                  id="username"
+                  type="text"
+                  name="username"
+                  required
+                  placeholder=""
+                />
                 <label for="username">Username</label>
               </div>
               <div class="input-box">
-                <input id="password" type="password" name="password" />
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  required
+                  placeholder=""
+                />
                 <label for="password">Password</label>
               </div>
               <div class="input-box">
@@ -139,6 +171,8 @@
                   id="repeat-password"
                   type="password"
                   name="repeat-password"
+                  required
+                  placeholder=""
                 />
                 <label for="repeat-password">Repeat Password</label>
               </div>
@@ -148,7 +182,7 @@
                     type="checkbox"
                     id="send-news-via-email"
                     name="send-news-via-email"
-                    value="send-news-via-email"
+                    value="true"
                     hidden
                     checked
                   />

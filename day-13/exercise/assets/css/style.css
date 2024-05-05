@@ -74,6 +74,15 @@ body {
   width: 584px;
 }
 
+#login-page .landing-info .logo {
+  height: 60px;
+  text-align: center;
+}
+
+#login-page .landing-info .logo img {
+  height: 100%;
+}
+
 #login-page .landing-info .landing-info-title-prev {
   font-size: 2.4rem;
   font-weight: 500;
@@ -86,7 +95,7 @@ body {
   position: relative;
   top: -10px;
   font-family: "Titillium Web", sans-serif;
-  font-size: 10.8rem;
+  font-size: 10.4rem;
   font-weight: 900;
   line-height: 10.4rem;
   text-align: center;
@@ -275,6 +284,13 @@ input[id="option-register"]:not(:checked)
   border-color: var(--input-focused-color);
 }
 
+#login-page
+  .landing-form
+  .form-box
+  form
+  .input-box
+  input:not(:placeholder-shown)
+  + label,
 #login-page .landing-form .form-box form .input-box input:focus + label {
   top: 0;
   font-size: 1.2rem;
@@ -471,6 +487,16 @@ input[id="option-register"]:not(:checked)
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+#login-page
+  .landing-form
+  .form-box
+  .login-by-socials
+  .social-links-list
+  a:hover {
+  transform: translateY(-5px);
 }
 
 #login-page
