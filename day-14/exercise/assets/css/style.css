@@ -41,6 +41,7 @@ input[value="dark_theme"]:checked + #root {
 }
 
 #root {
+  position: relative;
   background: var(--bg-primary);
   transition: all 0.3s ease;
   --bg-primary: #efefef;
@@ -55,6 +56,8 @@ input[value="dark_theme"]:checked + #root {
   --desc-text-color: #555;
   --border-input: #rgb(247, 247, 247);
 }
+
+/* Content */
 
 #header {
   position: fixed;
