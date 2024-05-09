@@ -475,6 +475,7 @@ input[id="option-register"]:not(:checked)
 #login-page .landing-form .form-box .login-by-socials .social-links-list {
   display: flex;
   justify-content: center;
+  list-style: none;
   gap: 12px;
 }
 

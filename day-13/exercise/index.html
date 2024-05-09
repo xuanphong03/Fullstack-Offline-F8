@@ -77,6 +77,7 @@
                   name="login-username"
                   placeholder=""
                   required
+                  autofocus
                 />
                 <label for="login-username">Username or Email</label>
               </div>
@@ -107,24 +108,34 @@
                   <a href="#forgot-password">Forgot Password?</a>
                 </div>
               </div>
-              <button class="btn btn-login">Login to your Account!</button>
+              <button type="submit" class="btn btn-login">
+                Login to your Account!
+              </button>
             </form>
             <div class="login-by-socials">
               <p class="lined-text">Login with your Social Account</p>
-              <div class="social-links-list">
-                <a href="#facebook">
-                  <i class="fa-brands fa-square-facebook"></i>
-                </a>
-                <a href="#twitter">
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="#twitch">
-                  <i class="fa-brands fa-twitch"></i>
-                </a>
-                <a href="#youtube">
-                  <i class="fa-brands fa-youtube"></i>
-                </a>
-              </div>
+              <ul class="social-links-list">
+                <li class="social-link-item">
+                  <a href="#facebook">
+                    <i class="fa-brands fa-square-facebook"></i>
+                  </a>
+                </li>
+                <li class="social-link-item">
+                  <a href="#twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="social-link-item">
+                  <a href="#twitch">
+                    <i class="fa-brands fa-twitch"></i>
+                  </a>
+                </li>
+                <li class="social-link-item">
+                  <a href="#youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <!-- End : Form Login -->
@@ -143,6 +154,7 @@
                   name="email"
                   required
                   placeholder=""
+                  autofocus
                 />
                 <label for="email">Your Email</label>
               </div>
@@ -190,7 +202,9 @@
                   Send me news and updates via email
                 </label>
               </div>
-              <button class="btn btn-register">Register Now!</button>
+              <button type="submit" class="btn btn-register">
+                Register Now!
+              </button>
             </form>
             <p class="form-policy">
               You'll receive a confirmation email in your inbox with a link to

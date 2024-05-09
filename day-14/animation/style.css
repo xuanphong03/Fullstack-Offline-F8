@@ -1,0 +1,124 @@
+/* 
+Animation: Nhóm các thuộc tính để xây dựng các hiệu ứng cho trang web
+
+1. keyframes --> Thiết kế kịch bản của hiệu ứng
+
+@keyframes tenhieuung {
+    from (tương ứng 0%) {
+    }
+
+    part_2% {
+    }
+
+    part_n% {
+    }
+
+    to (tương ứng 100%) {
+    }
+}
+
+2. Thuộc tính animation --> Áp dụng animation vào selector nào ?
+- animation-name: Tên hiệu ứng
+- animaiton-duration: tổng thời gian thực hiện hiệu ứng
+- animation-timing-function: Tốc độ (Giống transition)
+- animation-delay: Trễ trước khi thực hiện hiệu ứng
+- animation-iteration-count: Số lần chạy hiệu ứng (default: 1, vô hạn: infinite
+*/
+
+/* .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  margin: 30px auto;
+}
+
+.box .col-box {
+  position: relative;
+  display: block;
+  bottom: 0;
+  width: 20px;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.box .col-box .col {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: orange;
+  border-radius: inherit;
+}
+
+.box .col-box .col.col-1,
+.box .col-box .col.col-2,
+.box .col-box .col.col-3,
+.box .col-box .col.col-4 {
+  animation-name: loading;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.box .col-box .col.col-1 {
+  animation-delay: 0s;
+}
+.box .col-box .col.col-2 {
+  animation-delay: 0.1s;
+}
+.box .col-box .col.col-3 {
+  animation-delay: 0.2s;
+}
+.box .col-box .col.col-4 {
+  animation-delay: 0.3s;
+}
+
+@keyframes loading {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 70%;
+  }
+  100% {
+    top: 0;
+  }
+} */
+
+.bg {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 500px auto;
+  background: #f5f5f5;
+  overflow: hidden;
+  margin-bottom: 1000px;
+}
+
+.bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 200%;
+  translate: -100% -25%;
+  background: linear-gradient(
+    -45deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(255, 255, 255) 50%,
+    transparent 70%,
+    transparent 100%
+  );
+
+  animation: skeleton 1s ease infinite;
+}
+
+@keyframes skeleton {
+  to {
+    translate: 100%;
+  }
+}
