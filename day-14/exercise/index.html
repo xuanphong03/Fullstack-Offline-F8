@@ -30,17 +30,21 @@
       hidden
     />
     <div id="root">
-      <div class="bg-loading">
+      <!-- <div class="bg-loading">
         <div class="loading-box">
           <span class="loading-icon"></span>
           <span class="loading-icon"></span>
           <span class="loading-icon"></span>
           <span class="loading-icon"></span>
         </div>
-      </div>
+      </div> -->
       <header id="header">
-        <div class="header-wrapper">
+        <div class="header-wrapper container">
+          <label for="menu-mobile" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+          </label>
           <a href="#" class="logo"> <span>S</span>TRAVEL</a>
+          <input type="checkbox" id="menu-mobile" name="menu-mobile" hidden />
           <nav class="navbar">
             <ul class="nav-list">
               <li class="nav-item">
@@ -94,8 +98,7 @@
                 class="promotion-title wow wow animate__animated animate__zoomIn"
                 data-wow-delay="0.05s"
               >
-                Ưu Đãi 30.000.000 Cho <br />
-                5người/3ngày
+                Ưu Đãi 30.000.000 Cho 5người/3ngày
               </h3>
               <button
                 class="btn-reserve wow wow animate__animated animate__zoomIn"
@@ -110,47 +113,60 @@
 
         <!-- Start: Section About -->
         <section id="about">
-          <div class="video-box wow animate__animated animate__fadeInLeft">
-            <input type="radio" name="video" id="vid-1" hidden checked />
-            <input type="radio" name="video" id="vid-2" hidden />
-            <input type="radio" name="video" id="vid-3" hidden />
-            <div class="video-container">
-              <video
-                name="vid-1"
-                src="./assets/videos/vid-1.mp4"
-                autoplay
-                muted
-                loop
-              ></video>
-              <video
-                name="vid-2"
-                src="./assets/videos/vid-2.mp4"
-                autoplay
-                muted
-                loop
-              ></video>
-              <video
-                name="vid-3"
-                src="./assets/videos/vid-3.mp4"
-                autoplay
-                muted
-                loop
-              ></video>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-xl-6">
+                <div
+                  class="video-box wow animate__animated animate__fadeInLeft"
+                >
+                  <input type="radio" name="video" id="vid-1" hidden checked />
+                  <input type="radio" name="video" id="vid-2" hidden />
+                  <input type="radio" name="video" id="vid-3" hidden />
+                  <div class="video-container">
+                    <video
+                      name="vid-1"
+                      src="./assets/videos/vid-1.mp4"
+                      autoplay
+                      muted
+                      loop
+                    ></video>
+                    <video
+                      name="vid-2"
+                      src="./assets/videos/vid-2.mp4"
+                      autoplay
+                      muted
+                      loop
+                    ></video>
+                    <video
+                      name="vid-3"
+                      src="./assets/videos/vid-3.mp4"
+                      autoplay
+                      muted
+                      loop
+                    ></video>
+                  </div>
+                  <div class="video-control">
+                    <label class="control-icon" for="vid-1"></label>
+                    <label class="control-icon" for="vid-2"></label>
+                    <label class="control-icon" for="vid-3"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-6">
+                <div
+                  class="about-content wow animate__animated animate__fadeInRight"
+                >
+                  <span class="sub-title">Tại sao nên chọn Stravel</span>
+                  <h3 class="title">Trải nghiệm bậc nhất</h3>
+                  <p class="desc">
+                    Chúng Tôi Hợp Tác Với Những Địa Điểm Nghỉ Dưỡng Có Trải
+                    Nghiệm Bậc Nhất Để Đem Lại Một Kỳ Nghỉ Tuyệt Vời Cho Bạn
+                    Cùng Người Thân
+                  </p>
+                  <a href="#" class="btn">Tìm hiểu thêm về Stravel</a>
+                </div>
+              </div>
             </div>
-            <div class="video-control">
-              <label class="control-icon" for="vid-1"></label>
-              <label class="control-icon" for="vid-2"></label>
-              <label class="control-icon" for="vid-3"></label>
-            </div>
-          </div>
-          <div class="about-content wow animate__animated animate__fadeInRight">
-            <span class="sub-title">Tại sao nên chọn Stravel</span>
-            <h3 class="title">Trải nghiệm bậc nhất</h3>
-            <p class="desc">
-              Chúng Tôi Hợp Tác Với Những Địa Điểm Nghỉ Dưỡng Có Trải Nghiệm Bậc
-              Nhất Để Đem Lại Một Kỳ Nghỉ Tuyệt Vời Cho Bạn Cùng Người Thân
-            </p>
-            <a href="#" class="btn">Tìm hiểu thêm về Stravel</a>
           </div>
         </section>
         <!-- End: Section About -->
@@ -161,7 +177,7 @@
             <h3 class="sub-title">Những điểm đến ở Mumbai</h3>
             <h2 class="title">Những điểm du lịch bậc nhất</h2>
             <div class="row g-4 description-list">
-              <div class="col-3">
+              <div class="col-6 col-xl-4 col-xxl-3">
                 <article
                   class="destination-item wow animate__animated animate__slideInUp"
                 >
@@ -180,7 +196,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-xl-4 col-xxl-3">
                 <article
                   class="destination-item wow animate__animated animate__slideInUp"
                   data-wow-delay="0.05s"
@@ -200,7 +216,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-xl-4 col-xxl-3">
                 <article
                   class="destination-item wow animate__animated animate__slideInUp"
                   data-wow-delay="0.1s"
@@ -220,7 +236,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-xl-4 col-xxl-3">
                 <article
                   class="destination-item wow animate__animated animate__slideInUp"
                   data-wow-delay="0.15s"
@@ -240,7 +256,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-xl-4 col-xxl-3">
                 <article
                   class="destination-item wow animate__animated animate__slideInUp"
                 >
@@ -259,7 +275,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-xl-4 col-xxl-3">
                 <article
                   class="destination-item wow animate__animated animate__slideInUp"
                   data-wow-delay="0.05s"
@@ -279,7 +295,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-xl-4 col-xxl-3">
                 <article
                   class="destination-item wow animate__animated animate__slideInUp"
                   data-wow-delay="0.1s"
@@ -299,7 +315,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-xl-4 col-xxl-3">
                 <article
                   class="destination-item wow animate__animated animate__slideInUp"
                   data-wow-delay="0.15s"
@@ -330,7 +346,7 @@
             <h2 class="title">Dịch vụ</h2>
             <h3 class="sub-title">Nâng Cao Trải Nghiệm</h3>
             <div class="row g-4 service-list">
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="service-item wow animate__animated animate__zoomIn"
                 >
@@ -339,7 +355,7 @@
                   <p class="desc">Some text...</p>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="service-item wow animate__animated animate__zoomIn"
                 >
@@ -348,7 +364,7 @@
                   <p class="desc">Some text...</p>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="service-item wow animate__animated animate__zoomIn"
                 >
@@ -357,7 +373,7 @@
                   <p class="desc">Some text...</p>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="service-item wow animate__animated animate__zoomIn"
                 >
@@ -366,7 +382,7 @@
                   <p class="desc">Some text...</p>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="service-item wow animate__animated animate__zoomIn"
                 >
@@ -375,7 +391,7 @@
                   <p class="desc">Some text...</p>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="service-item wow animate__animated animate__zoomIn"
                 >
@@ -394,7 +410,7 @@
           <h2 class="title">Những bức ảnh về Mumbai</h2>
           <div class="container">
             <div class="row g-4 gallery-list">
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -405,7 +421,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -415,7 +431,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -428,7 +444,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -441,7 +457,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -454,7 +470,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -465,7 +481,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -476,7 +492,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -487,7 +503,7 @@
                   </div>
                 </article>
               </div>
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <article
                   class="gallery-item wow animate__animated animate__zoomIn"
                 >
@@ -506,9 +522,9 @@
         <!-- Start: Feedback -->
         <section id="feedback">
           <div class="container">
-            <div class="row">
+            <div class="row g-5">
               <div
-                class="col-6 feedback-intro wow animate__animated animate__fadeInLeft"
+                class="col-12 col-xl-6 feedback-intro wow animate__animated animate__fadeInLeft"
               >
                 <h2 class="title">Những Lời Đánh Giá Tốt Nhất</h2>
                 <p class="desc">
@@ -517,12 +533,12 @@
                   Mumbai Này.
                 </p>
               </div>
-              <div class="col-6">
+              <div class="col-12 col-xl-6">
                 <div
                   class="row g-3 feedback-list wow animate__animated animate__fadeInRight"
                 >
                   <!-- Start: Feedback Item -->
-                  <div class="col-6">
+                  <div class="col-4 col-xl-6">
                     <article class="feedback-item">
                       <p class="feedback-content">
                         Chuyến Đi Rất Vui, Giá Rất Rẻ. Gọi Tư Vấn Rất Nhanh. Tôi
@@ -542,7 +558,7 @@
                   <!-- End: Feedback Item -->
 
                   <!-- Start: Feedback Item -->
-                  <div class="col-6">
+                  <div class="col-4 col-xl-6">
                     <article class="feedback-item">
                       <p class="feedback-content">
                         Chuyến Đi Rất Vui, Đáng Để Thử. Đồ Ăn Ở Đây Rất Ngon.
@@ -561,7 +577,7 @@
                   <!-- End: Feedback Item -->
 
                   <!-- Start: Feedback Item -->
-                  <div class="col-6">
+                  <div class="col-4 col-xl-6">
                     <article class="feedback-item">
                       <p class="feedback-content">
                         Khách Sạn Ở Rất Tuyệt. Thích Hợp Với 1 Chỗ Nghỉ Dưỡng.
@@ -580,14 +596,14 @@
                   <!-- End: Feedback Item -->
 
                   <!-- Start: Feedback Item -->
-                  <div class="col-6">
+                  <div class="col-4 col-md-12 col-xl-6">
                     <article class="feedback-item">
                       <p class="feedback-content">
                         Hướng Dẫn Viên Rất Chu Đáo. Mọi Dịch Vụ Đều Có Và Rất
                         Thoải Mái
                       </p>
                       <div class="row feedback-user">
-                        <div class="col-3">
+                        <div class="col-3 col-md-1">
                           <img src="./assets/img/pic-1.png" alt="user avatar" />
                         </div>
                         <div class="col-9 user-info">
@@ -609,8 +625,10 @@
         <section id="review">
           <div class="container">
             <h2 class="title">Đánh giá</h2>
-            <div class="row g-4">
-              <div class="col-5 map wow animate__animated animate__fadeInLeft">
+            <div class="row g-5">
+              <div
+                class="col-12 col-xl-5 map wow animate__animated animate__fadeInLeft"
+              >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.4086983430116!2d105.78081327476782!3d20.976248189581064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acd2d89877d7%3A0xe55435164e9b4695!2zMTk3IMSQxrDhu51uZyBUcuG6p24gUGjDuiwgUC4gVsSDbiBRdcOhbiwgSMOgIMSQw7RuZywgSMOgIE7hu5lpLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1715186263923!5m2!1sen!2s"
                   width="600"
@@ -620,7 +638,7 @@
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              <div class="col-7">
+              <div class="col-12 col-xl-7">
                 <form
                   name="review-form"
                   class="form-review wow animate__animated animate__fadeInRight"
@@ -689,9 +707,9 @@
           <div class="container">
             <h2 class="title">Blogs & Posts</h2>
             <h3 class="sub-title">Tìm Hiểu Thêm Về Mumbai</h3>
-            <div class="row blogs-list">
+            <div class="row g-4 blogs-list">
               <!--  Start Blog item-->
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <div class="blog-item wow animate__animated animate__zoomIn">
                   <div class="blog-img">
                     <img src="./assets/img/blog-1.jpg" alt="blog img" />
@@ -720,7 +738,7 @@
               <!--  End Blog item-->
 
               <!--  Start Blog item-->
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <div class="blog-item wow animate__animated animate__zoomIn">
                   <div class="blog-img">
                     <img src="./assets/img/blog-2.jpg" alt="blog img" />
@@ -749,7 +767,7 @@
               <!--  End Blog item-->
 
               <!--  Start Blog item-->
-              <div class="col-4">
+              <div class="col-12 col-md-6 col-xxl-4">
                 <div class="blog-item wow animate__animated animate__zoomIn">
                   <div class="blog-img">
                     <img src="./assets/img/blog-3.jpg" alt="blog img" />
@@ -804,7 +822,7 @@
         <div class="container">
           <div class="row g-5">
             <!--Start: Intro company -->
-            <div class="col-3">
+            <div class="col-6 col-md-4 col-xxl-3">
               <div
                 class="intro-company wow animate__animated animate__fadeInUp"
               >
@@ -832,7 +850,7 @@
             <!-- End: Intro company -->
 
             <!-- Navigate -->
-            <div class="col-3">
+            <div class="col-6 col-md-4 col-xxl-3">
               <nav class="navbar wow animate__animated animate__fadeInUp">
                 <h3 class="title">Chuyển hướng nhanh</h3>
                 <ul class="nav-list">
@@ -872,7 +890,7 @@
             <!-- Navigate -->
 
             <!-- Contact -->
-            <div class="col-3">
+            <div class="col-6 col-md-4 col-xxl-3">
               <div class="contact-box wow animate__animated animate__fadeInUp">
                 <h3 class="title">Liên hệ</h3>
                 <ul class="contact-list">
@@ -895,7 +913,7 @@
             <!-- Contact -->
 
             <!-- News -->
-            <div class="col-3">
+            <div class="col-6 col-md-4 col-xxl-3">
               <div class="news-box wow animate__animated animate__fadeInUp">
                 <h3 class="title">Tin tức mới</h3>
                 <p class="desc">Đăng Ký Để Nhận Tin Tức Về Ưu Đãi Sớm Nhất!</p>

@@ -86,8 +86,13 @@ input[value="dark_theme"]:checked + #root {
   align-items: center;
   justify-content: space-between;
   height: 70px;
-  max-width: var(--max-width);
   margin: 0 auto;
+}
+
+#header .header-wrapper .menu-icon {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 #header .header-wrapper .logo {
@@ -443,6 +448,7 @@ input[value="dark_theme"]:checked
   width: 100%;
   height: 50%;
   transition: all 0.5s ease;
+  object-fit: cover;
 }
 #destination .destination-item img:hover {
   scale: 1.1;
@@ -611,10 +617,10 @@ input[value="dark_theme"]:checked
   text-transform: capitalize;
 }
 #feedback .feedback-list .feedback-item {
-  height: fit-content;
   padding: 20px 20px 5px;
   border: 2px solid var(--orange);
   border-radius: 8px;
+  height: 100%;
 }
 #feedback .feedback-list .feedback-content {
   font-size: 1.4rem;
@@ -739,6 +745,7 @@ input[value="dark_theme"]:checked
   height: 100%;
   width: 100%;
   transition: all 0.3s linear;
+  object-fit: cover;
 }
 #blogs .blog-item img:hover {
   scale: 1.1;
@@ -981,4 +988,344 @@ input[value="dark_theme"]:checked
 
 #footer .credit p span {
   color: var(--orange);
+}
+
+/* Responsive */
+@media screen and (min-width: 576px) {
+  #header .header-wrapper {
+    height: 60px;
+  }
+  #header .header-wrapper .logo {
+    font-size: 2.2rem;
+  }
+  #header .navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #333;
+    height: 0px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+  }
+  #header input[name="menu-mobile"]:checked + .navbar {
+    height: 258px;
+  }
+  #header .navbar .nav-list {
+    display: block;
+  }
+  #header .navbar .nav-list .nav-item {
+    margin: 15px 10px;
+  }
+  #header .header-wrapper .btn-container .btn.btn-reserve {
+    height: 32px;
+    font-size: 1.7rem;
+  }
+  /* Section home */
+  #home .promotion-box {
+    display: block;
+    background: #efefef;
+    bottom: -30%;
+  }
+  #home .promotion-box .promotion-title {
+    font-size: 2.7rem;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #home .promotion-box .btn-reserve {
+    width: 100%;
+    height: 48px;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  /* About Section */
+  #about .about-content .sub-title {
+    font-size: 1.7rem;
+  }
+  #about .about-content .title {
+    font-size: 3.5rem;
+  }
+  #about .about-content .desc {
+    font-size: 1.5rem;
+    margin-top: 5px;
+  }
+  #about .about-content .btn {
+    margin-top: 10px;
+    font-size: 1.7rem;
+    padding: 6px 16px;
+  }
+  #about .video-box .video-control label {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Destination */
+  #destination .sub-title {
+    font-size: 1.7rem;
+  }
+  #destination .title {
+    font-size: 3.5rem;
+  }
+  #destination .destination-item {
+    height: 360px;
+  }
+  #destination .destination-item .destination-content .desc {
+    font-size: 1.2rem;
+  }
+
+  /* Service Section */
+  #service .sub-title {
+    font-size: 3.5rem;
+  }
+  #service .title {
+    font-size: 1.7rem;
+  }
+  #service .service-list .service-item .title {
+    font-size: 1.7rem;
+  }
+  #service .service-list .service-item .desc {
+    margin-top: 5px;
+    font-size: 1.2rem;
+  }
+
+  /* Gallery */
+  #gallery .title {
+    font-size: 2.6rem;
+  }
+  #gallery .gallery-list .gallery-item img {
+    height: 420px;
+  }
+  #gallery .gallery-list .gallery-item .detail-info .title {
+    font-size: 1.7rem;
+  }
+
+  /* Feedback */
+  #feedback .feedback-intro .title {
+    font-size: 2.6rem;
+  }
+  #feedback .feedback-intro .desc {
+    font-size: 1.2rem;
+  }
+  #feedback .feedback-list .feedback-content {
+    font-size: 1.2rem;
+  }
+  #feedback .feedback-list .feedback-item .feedback-user img {
+    width: 44px;
+    height: 44px;
+  }
+  #feedback .feedback-list .feedback-item .feedback-user .user-info .user-name {
+    font-size: 1.5rem;
+  }
+  #feedback .feedback-list .feedback-item .feedback-user .user-info .user-role {
+    font-size: 1.3rem;
+  }
+
+  /* Review */
+  #review .title {
+    font-size: 2.6rem;
+  }
+  #review .map iframe {
+    height: 350px;
+  }
+  #review .form-review {
+    padding: 20px 15px;
+  }
+  #review .form-review input,
+  #review .form-review textarea {
+    padding: 8px;
+    font-size: 1.5rem;
+  }
+  #review .form-review .btn {
+    font-size: 1.7rem;
+    height: 40px;
+    margin-bottom: -15px;
+  }
+
+  /* Blogs */
+  #blogs {
+    padding-top: 50px;
+  }
+  #blogs .title {
+    font-size: 1.7rem;
+  }
+  #blogs .sub-title {
+    font-size: 3.5rem;
+  }
+  #blogs .blog-item .blog-img {
+    height: 220px;
+  }
+
+  /* Banner */
+  #banner .content {
+    padding: 20px;
+  }
+  #banner .content .sub-title {
+    font-size: 1.7rem;
+  }
+  #banner .content .title {
+    font-size: 3.5rem;
+  }
+  #banner .content .desc {
+    font-size: 1.2rem;
+  }
+  #banner .content .btn {
+    font-size: 1.7rem;
+    padding: 7px 17px;
+    height: fit-content;
+    margin-top: 5px;
+  }
+
+  /* Footer */
+  #footer .intro-company .logo {
+    font-size: 2.2rem;
+  }
+  #footer .navbar .title,
+  #footer .contact-box .title,
+  #footer .news-box .title {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+  }
+  #footer .intro-company .desc,
+  #footer .news-box .desc {
+    font-size: 1.2rem;
+  }
+  #footer .navbar .nav-list .nav-item,
+  #footer .contact-box .contact-list .contact-item {
+    margin-bottom: 5px;
+  }
+  #footer .navbar .nav-list .nav-item a,
+  #footer .contact-box .contact-list .contact-item {
+    font-size: 1.2rem;
+  }
+  #footer .news-box .form-register input {
+    font-size: 1.2rem;
+  }
+  #footer .news-box .form-register button {
+    font-size: 1.7rem;
+    height: fit-content;
+  }
+  #footer .credit {
+    font-size: 1.7rem;
+    margin-bottom: -15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #gallery .gallery-list .gallery-item img {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #header .header-wrapper .menu-icon {
+    display: none;
+  }
+  #header .navbar {
+    position: static;
+    height: fit-content !important;
+  }
+  #header .navbar .nav-list {
+    display: flex;
+    gap: 5;
+  }
+  #header .navbar .nav-list .nav-item {
+    margin: 0 5px;
+  }
+  #header .header-wrapper .btn-container .btn.btn-theme {
+    translate: -50px -50%;
+  }
+  #destination .destination-item {
+    height: 380px;
+  }
+  #destination .destination-item .destination-content .title {
+    font-size: 2rem;
+  }
+  #destination .destination-item .destination-content .desc {
+    font-size: 1.4rem;
+  }
+  #destination .destination-item .destination-content .btn {
+    font-size: 1.7rem;
+  }
+  #destination .sub-title,
+  #about .about-content .sub-title,
+  #service .title,
+  #service .service-list .service-item .title,
+  #gallery .gallery-list .gallery-item .detail-info .title,
+  #blogs .title,
+  #banner .content .sub-title,
+  #banner .content .btn,
+  #footer .news-box .form-register button,
+  #footer .credit {
+    font-size: 2rem;
+  }
+  #destination .title,
+  #about .about-content .title,
+  #service .sub-title,
+  #blogs .sub-title,
+  #banner .content .title {
+    font-size: 4rem;
+  }
+  #about .about-content .desc,
+  #feedback .feedback-list .feedback-item .feedback-user .user-info .user-name,
+  #review .form-review input,
+  #review .form-review textarea {
+    font-size: 1.7rem;
+  }
+  #service .service-list .service-item .desc,
+  #feedback .feedback-intro .desc,
+  #feedback .feedback-list .feedback-content,
+  #banner .content .desc,
+  #footer .intro-company .desc,
+  #footer .news-box .desc,
+  #footer .navbar .nav-list .nav-item a,
+  #footer .contact-box .contact-list .contact-item,
+  #footer .news-box .form-register input {
+    font-size: 1.4rem;
+  }
+  #gallery .title,
+  #feedback .feedback-intro .title,
+  #review .title {
+    font-size: 3rem;
+  }
+  #feedback .feedback-list .feedback-item .feedback-user .user-info .user-role {
+    font-size: 1.5rem;
+  }
+  #home .promotion-box {
+    display: flex;
+  }
+  #review .form-review input,
+  #review .form-review textarea {
+    padding: 10px;
+  }
+  #home .promotion-box .promotion-title {
+    font-size: 3.75rem;
+  }
+  #home .promotion-box .btn-reserve,
+  #about .about-content .btn {
+    font-size: 2rem;
+  }
+  #feedback {
+    padding-top: 50px;
+  }
+  #footer .intro-company .logo {
+    font-size: 2.5rem;
+  }
+  #footer .navbar .title,
+  #footer .contact-box .title,
+  #footer .news-box .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #home .promotion-box {
+    bottom: -20%;
+  }
+  #banner .content {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
 }

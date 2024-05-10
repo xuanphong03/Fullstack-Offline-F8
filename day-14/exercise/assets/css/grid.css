@@ -14,7 +14,7 @@ Gutter: Tạo khoảng cách giữa các cột và hàng (Thay đổi lại theo
 .g-5 => 1rem x 3
 */
 :root {
-  --container-width: 1250px;
+  --container-width: 1200px;
   --max-column: 12;
   --column-space: 30px;
   --spacer: 1rem;
@@ -142,6 +142,9 @@ Gutter: Tạo khoảng cách giữa các cột và hàng (Thay đổi lại theo
 }
 
 @media screen and (min-width: 768px) {
+  :root {
+    --container-width: 900px;
+  }
   .col-md-1 {
     --column-size: 1;
   }
@@ -220,6 +223,9 @@ Gutter: Tạo khoảng cách giữa các cột và hàng (Thay đổi lại theo
 }
 
 @media screen and (min-width: 1200px) {
+  :root {
+    --container-width: 1000px;
+  }
   .container {
     padding: 0;
   }
@@ -262,6 +268,9 @@ Gutter: Tạo khoảng cách giữa các cột và hàng (Thay đổi lại theo
 }
 
 @media screen and (min-width: 1400px) {
+  :root {
+    --container-width: 1200px;
+  }
   .col-xxl-1 {
     --column-size: 1;
   }
