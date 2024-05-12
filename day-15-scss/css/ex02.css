@@ -1,0 +1,69 @@
+body {
+  color: true;
+}
+
+.box {
+  color: red;
+}
+
+.col-1 {
+  width: 10px;
+}
+
+.col-2 {
+  width: 10%;
+}
+
+.col-3 {
+  width: 30px;
+}
+
+.col-4 {
+  width: 20%;
+}
+
+.col-5 {
+  width: 50px;
+}
+
+.col-6 {
+  width: 30%;
+}
+
+.col-7 {
+  width: 70px;
+}
+
+.col-8 {
+  width: 40%;
+}
+
+.col-9 {
+  width: 90px;
+}
+
+.col-10 {
+  width: 50%;
+}
+
+.col-11 {
+  width: 110px;
+}
+
+.col-12 {
+  width: 60%;
+}
+
+.col-small {
+  font-size: 40px;
+}
+
+.col-medium {
+  font-size: 60px;
+}
+
+.col-large {
+  font-size: 80px;
+}
+
+/*# sourceMappingURL=ex02.css.map */

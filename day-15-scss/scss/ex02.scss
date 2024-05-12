@@ -1,0 +1,72 @@
+// Toán tử
+// Số học: +, -, *,, / %
+// Số sánh: >= , <= , == , != , > , <
+// Kiểu dữ liệu: chuỗi, số, boolean
+// Lý luận: and, or, not
+
+$check: true;
+body {
+  color: $check;
+}
+
+// Câu lệnh rẽ nhánh
+$number: 10;
+@if $number >= 10 {
+  .box {
+    color: red;
+  }
+} @else {
+  .column {
+    width: 100%;
+  }
+}
+
+// Vòng lặp
+@for $i from 1 through 12 {
+  @if ($i % 2 == 0) {
+    .col-#{$i} {
+      width: $i * 5%;
+    }
+  } @else {
+    .col-#{$i} {
+      width: $i * 10px;
+    }
+  }
+}
+
+// $sizes: 40px, 50px, 80px;
+// $length: length(
+//   $list: $sizes,
+// );
+// $count: 0;
+// @each $size in $sizes {
+//   $count: $count + 1;
+//   .box-#{$size} {
+//     @if $count == $length {
+//       font-size: 0;
+//     } @else {
+//       font-size: 40px;
+//     }
+//   }
+// }
+
+// $sizes: (small, 40px, normal), (medium, 80px, 500), (large, 120px, 700);
+
+// @each $name, $size, $weight in $sizes {
+//   .col-#{$name} {
+//     font-size: $size;
+//     font-weight: $weight;
+//   }
+// }
+
+$sizes: (
+  small: 40px,
+  medium: 60px,
+  large: 80px,
+);
+
+@each $name, $size in $sizes {
+  .col-#{$name} {
+    font-size: $size;
+  }
+}

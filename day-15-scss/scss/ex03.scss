@@ -1,0 +1,52 @@
+// %section-base {
+//   padding: 30px 0;
+//   max-width: 1200px;
+//   margin: 0 auto;
+// }
+@mixin section-base {
+  padding: 30px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .item {
+    color: red;
+  }
+}
+
+@mixin container {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+@mixin media-desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin center($width, $spacer: 0) {
+  max-width: $width;
+  margin: 0 $spacer;
+}
+@include media-desktop {
+  .header {
+    @include center(1300px, 20px);
+    padding: 0;
+    .menu {
+      display: block;
+    }
+  }
+}
+.posts {
+  background: red;
+  //   @extend %section-base;
+  @include section-base();
+}
+.products {
+  background: green;
+  //   @extend %section-base;
+  @include section-base();
+}
+
+// use
+// forward

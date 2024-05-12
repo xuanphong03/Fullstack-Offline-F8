@@ -1,0 +1,30 @@
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  large: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+$max-column: 12;
+$column-space: 30px;
+$spacer: 1rem;
+
+@for $columnSize from 1 through 12 {
+  .col-#{$columnSize} {
+    flex-basis: calc(100% / $max-column * $columnSize);
+    max-width: calc(100% / $max-column * $columnSize);
+    padding-inline: calc($column-space / 2);
+  }
+}
+
+@each $name, $breakpoint in $breakpoints {
+  @media screen and (min-width: #{$breakpoint}) {
+    @for $columnSize from 1 through 12 {
+      .col-#{$name}-#{$columnSize} {
+        flex-basis: calc(100% / $max-column * $columnSize);
+        max-width: calc(100% / $max-column * $columnSize);
+        padding-inline: calc($column-space / 2);
+      }
+    }
+  }
+}

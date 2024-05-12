@@ -1,0 +1,45 @@
+@import "partials/reset";
+// Đây là comment SCSS
+/*
+  Đây là comment CSS
+*/
+// Biến toàn cục
+$primaryColor: red;
+
+// Cú pháp lồng selector
+.header {
+  padding: 30px 0;
+  background-color: $primaryColor;
+  .top-bar {
+    $textColor: #555;
+    background: yellow;
+
+    a {
+      text-decoration: none;
+      color: $textColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .header-inner {
+    background: red;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+$number: 10;
+body {
+  font-size: #{$number}px;
+}
+
+$selector: ".column-a";
+#{$selector} {
+  color: red;
+}
