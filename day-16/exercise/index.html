@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F8 - Dự án HTML CSS</title>
+    <!-- fontawersome cnd -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- animation style cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- wowjs cnd -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <input type="checkbox" name="menu_tablet" id="menu_tablet" hidden />
+    <label for="menu_tablet" class="bg_shadow"></label>
+    <header class="header">
+      <div class="container">
+        <div class="header_wrapper">
+          <a href="#" class="logo">
+            <img src="./images/logo.png" alt="logo" />
+          </a>
+          <label for="menu_tablet" class="menu_icon"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <nav class="navbar">
+            <label for="menu_tablet" class="close_icon"
+              ><i class="fa-solid fa-xmark"></i
+            ></label>
+            <ul class="nav_list">
+              <li class="nav_item nav_item--active">
+                <a href="#">Trang chủ</a>
+              </li>
+              <li class="nav_item">
+                <a href="#about">Về Greenchop</a>
+              </li>
+              <li class="nav_item">
+                <a href="#products">Sản phẩm</a>
+              </li>
+              <li class="nav_item">
+                <a href="#news">Tin tức</a>
+              </li>
+              <li class="nav_item">
+                <a href="#contact">Liên hệ</a>
+              </li>
+              <li class="nav_item">
+                <a href="#cart"
+                  ><img src="./images/cart-icon.svg" alt="cart icon" />
+                  <span class="badge">3</span>
+                </a>
+              </li>
+              <li class="nav_item">
+                <a href="#seach"
+                  ><img src="./images/search-icon.svg" alt="cart icon"
+                /></a>
+                <input
+                  type="text"
+                  class="search_box"
+                  placeholder="Tìm kiếm..."
+                />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section_introduction">
+        <div class="content">
+          <h2
+            class="heading wow animate__animated animate__fadeInLeft"
+            data-wow-duration="1s"
+          >
+            GreenChop: Tiện gấp dễ gắp
+          </h2>
+          <h3
+            class="sub_heading wow animate__animated animate__fadeInLeft"
+            data-wow-delay="0.25s"
+            data-wow-duration="1s"
+          >
+            AN TOÀN HƠN GIỮA MÙA COVID
+          </h3>
+          <p
+            class="desc wow animate__animated animate__fadeInLeft"
+            data-wow-delay="0.5s"
+            data-wow-duration="1s"
+          >
+            GreenChop là sản phẩm đũa thay đầu duy nhất trên thị trường hiện
+            tại. Sản phẩm cho phép người dùng tháo lắp và thay mới đầu đũa 100%
+            trong mỗi bữa ăn. Nhờ đó, GreenChop giúp ngăn ngừa khả năng lây lan
+            dịch bệnh và đảm bảo an toàn cho người dùng.
+          </p>
+        </div>
+        <div class="banner_wrapper">
+          <img
+            src="./images/imgchop.png"
+            alt="banner"
+            class="banner wow animate__animated animate__rotateIn"
+            data-wow-duration="1.5s"
+            data-wow-iteration="1"
+          />
+          <h1 class="heading">GREENCHOP</h1>
+        </div>
+      </section>
+
+      <!--Start: Section About -->
+      <section class="section_about">
+        <div class="container">
+          <div class="content">
+            <div class="ellipse ellipse--green"></div>
+            <div class="ellipse ellipse--orange"></div>
+            <h2 class="heading">
+              GreenChop: Giữ an toàn trong từng bữa ăn của người Việt
+            </h2>
+            <p class="desc">
+              Với sự tinh tế trong việc thấu hiểu hành vi của khách hàng cùng ý
+              tưởng đột phá, GreenChop đã trở thành sản phẩm không thể thiếu
+              trong mọi bữa ăn mùa dịch tại các nhà hàng, khách sạn, quán ăn...
+            </p>
+            <div class="info_list">
+              <!-- Start Info Item -->
+              <div
+                class="info_item_box wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-offset="100"
+              >
+                <article class="info_item">
+                  <div class="medal_icon medal_icon--orange">
+                    <img src="./images/quality1.svg" alt="medal icon" />
+                  </div>
+                  <div class="about_content">
+                    <h3 class="heading">1000+</h3>
+                    <p class="desc">Hộ gia đình tin dùng GreenChop</p>
+                  </div>
+                </article>
+              </div>
+              <!-- End: Info Item -->
+
+              <!-- Start Info Item -->
+              <div
+                class="info_item_box wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.1s"
+                data-wow-offset="100"
+              >
+                <article class="info_item">
+                  <div class="medal_icon medal_icon--green">
+                    <img src="./images/quality1.svg" alt="medal icon" />
+                  </div>
+                  <div class="about_content">
+                    <h3 class="heading">600+</h3>
+                    <p class="desc">
+                      Nhà hàng đã phục vụ GreenChop cho thực khách
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <!-- End: Info Item -->
+
+              <!-- Start Info Item -->
+              <div
+                class="info_item_box wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+                data-wow-offset="100"
+              >
+                <article class="info_item">
+                  <div class="medal_icon medal_icon--orange">
+                    <img src="./images/quality1.svg" alt="medal icon" />
+                  </div>
+                  <div class="about_content">
+                    <h3 class="heading">20+</h3>
+                    <p class="desc">Tỉnh thành được GreenChop phủ sóng</p>
+                  </div>
+                </article>
+              </div>
+              <!-- End: Info Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End: Section About -->
+
+      <!-- Start: Section Products -->
+      <section class="section_products">
+        <div class="container">
+          <h2 class="heading">Sản phẩm</h2>
+          <div class="products_list">
+            <div class="row g-5">
+              <!-- Product Item -->
+              <div
+                class="col-6 col-md-4 wow animate_animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="ellipse ellipse--orange"></div>
+                  <div class="product_content">
+                    <img src="./images/sp1.png" alt="Sản phẩm 1" />
+                    <h3 class="product_heading">
+                      Combo <br />
+                      Quán ăn
+                    </h3>
+                    <p class="product_desc">1 thùng 1000 đôi</p>
+                    <p class="product_price">Giá: <span>600.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-6 col-md-4 wow animate_animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.1s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="ellipse ellipse--green"></div>
+                  <div class="product_content">
+                    <img src="./images/sp2.png" alt="Sản phẩm" />
+                    <h3 class="product_heading">
+                      Combo <br />
+                      Quán ăn - nhà hàng
+                    </h3>
+                    <p class="product_desc">1 thùng 2000 đôi</p>
+                    <p class="product_price">Giá: <span>1.200.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-6 col-md-4 wow animate_animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="ellipse ellipse--orange"></div>
+                  <div class="product_content">
+                    <img src="./images/sp3.png" alt="Sản phẩm" />
+                    <h3 class="product_heading">
+                      Combo Quán ăn <br />
+                      Nhà hàng - Khách sạn
+                    </h3>
+                    <p class="product_desc">1 thùng 3000 đôi</p>
+                    <p class="product_price">Giá: <span>1.800.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-6 col-md-4 wow animate_animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="ellipse ellipse--orange"></div>
+                  <div class="product_content">
+                    <img src="./images/sp1.png" alt="Sản phẩm 1" />
+                    <h3 class="product_heading">
+                      Combo <br />
+                      Quán ăn
+                    </h3>
+                    <p class="product_desc">1 thùng 1000 đôi</p>
+                    <p class="product_price">Giá: <span>600.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-6 col-md-4 wow animate_animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.1s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="ellipse ellipse--green"></div>
+                  <div class="product_content">
+                    <img src="./images/sp2.png" alt="Sản phẩm" />
+                    <h3 class="product_heading">
+                      Combo <br />
+                      Quán ăn - nhà hàng
+                    </h3>
+                    <p class="product_desc">1 thùng 2000 đôi</p>
+                    <p class="product_price">Giá: <span>1.200.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-6 col-md-4 wow animate_animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="ellipse ellipse--orange"></div>
+                  <div class="product_content">
+                    <img src="./images/sp3.png" alt="Sản phẩm" />
+                    <h3 class="product_heading">
+                      Combo Quán ăn <br />
+                      Nhà hàng - Khách sạn
+                    </h3>
+                    <p class="product_desc">1 thùng 3000 đôi</p>
+                    <p class="product_price">Giá: <span>1.800.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End: Section Products -->
+    </main>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>

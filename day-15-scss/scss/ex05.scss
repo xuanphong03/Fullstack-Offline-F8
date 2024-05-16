@@ -1,0 +1,12 @@
+@use "./components/footer";
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: footer.$textSize;
+}
+
+/*
+Import cả folder
+- b1: Tạo ra file _index.scss
+- b2: forward tất cả các file trong folder vào _index.scss
+- b3: chỗ nào cần import cả folder chỉ cần import file _index.scss
+*/

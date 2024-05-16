@@ -1,0 +1,8 @@
+@use "../partials/variables" as v;
+@forward "../partials/variables"; // Chuyển tiếp các member từ file variables để bât kỳ
+// file nào import từ footer sẽ được sử dụng
+.footer {
+  padding: 30px 0;
+  font-size: v.$textSize;
+  background: v.$primaryColor;
+}

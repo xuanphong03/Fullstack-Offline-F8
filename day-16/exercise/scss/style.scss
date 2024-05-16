@@ -1,0 +1,18 @@
+// Partials
+// @use "partials/variables";
+// @use "partials/mixin";
+@use "partials/reset";
+@use "partials/base";
+
+// Component
+@use "components/breadcrum";
+@use "components/card-item";
+
+// Layout
+@use "layouts/header";
+@use "layouts/footer";
+
+// Page
+@use "pages/home";
+@use "pages/about";
+@use "pages/products";

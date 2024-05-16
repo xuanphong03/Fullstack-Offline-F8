@@ -1,0 +1,217 @@
+@use "../partials/variables" as v;
+@use "../partials/mixin";
+
+.header {
+  box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  background: #fff;
+
+  .header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: v.$heightHeader;
+
+    .logo {
+      align-self: center;
+      display: block;
+      width: 105px;
+      height: 73px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .menu_icon {
+      display: none;
+      align-self: center;
+      font-size: 2rem;
+      padding: 10px;
+    }
+
+    .navbar {
+      height: 60%;
+      align-self: flex-end;
+
+      .close_icon {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2.2rem;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .nav_list {
+        height: 100%;
+        display: inline-flex;
+        gap: 50px;
+        align-items: flex-start;
+
+        .nav_item {
+          height: 100%;
+
+          a {
+            position: relative;
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: v.$textColor;
+            line-height: 21.667px; /* 130% */
+            text-decoration: none;
+            height: 100%;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 100%;
+              height: 4px;
+              background-color: v.$primaryColor;
+              transition: all 0.3s ease;
+            }
+
+            .badge {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              top: -15px;
+              right: -5px;
+              background-color: v.$red;
+              color: #fff;
+              border-radius: 50%;
+              width: 16px;
+              height: 16px;
+              font-size: 1.2rem;
+            }
+            img {
+              width: 100%;
+            }
+          }
+
+          &.nav_item--active a,
+          &:hover a {
+            color: v.$primaryColor;
+          }
+          &.nav_item--active a::after,
+          &:hover a::after {
+            right: 0;
+          }
+        }
+
+        .search_box {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.bg_shadow {
+  position: fixed;
+  inset: 0;
+  background-color: #0000007b;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+@include mixin.media-tablet {
+  .header {
+    .header_wrapper {
+      .menu_icon {
+        display: block;
+        padding: 10px 20px;
+      }
+
+      .navbar {
+        position: fixed;
+        inset: 0;
+        height: 100%;
+        width: 350px;
+        padding: 10px 20px;
+        background-color: #fff;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        z-index: 99999;
+
+        .close_icon {
+          display: flex;
+        }
+
+        .nav_list {
+          display: block;
+          height: auto;
+          margin-top: 20px;
+          margin-left: 10px;
+          .nav_item {
+            margin-bottom: 10px;
+
+            a {
+              display: block;
+              width: fit-content;
+              padding: 10px;
+              .badge {
+                top: 0;
+                right: 0;
+                width: 22px;
+                height: 22px;
+              }
+              img {
+                width: auto;
+                max-height: 100%;
+              }
+            }
+
+            &.nav_item--active a::after,
+            &:hover a::after {
+              right: 100%;
+            }
+            &:last-child {
+              display: flex;
+              align-items: center;
+              width: fit-content;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+          }
+
+          .search_box {
+            display: block;
+            height: 30px;
+            width: 200px;
+            padding: 10px;
+          }
+          .search_box,
+          &.search_box::placeholder {
+            font-size: 1.6rem;
+            color: v.$textColor;
+            font-family: "Inter", sans-serif;
+          }
+        }
+      }
+    }
+  }
+
+  input[name="menu_tablet"]:checked ~ .header .header_wrapper .navbar {
+    transform: translateX(0);
+  }
+
+  input[name="menu_tablet"]:checked ~ .bg_shadow {
+    visibility: visible;
+    opacity: 1;
+  }
+}

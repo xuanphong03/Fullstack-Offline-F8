@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.footer {
+  padding: 30px 0;
+  font-size: 24px;
+  background: red;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+}
+
+/*
+Import cả folder
+- b1: Tạo ra file _index.scss
+- b2: forward tất cả các file trong folder vào _index.scss
+- b3: chỗ nào cần import cả folder chỉ cần import file _index.scss
+*/
+
+/*# sourceMappingURL=ex05.css.map */

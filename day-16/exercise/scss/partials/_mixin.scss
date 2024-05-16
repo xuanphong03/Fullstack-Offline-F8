@@ -1,0 +1,35 @@
+// Định nghĩa các mixin
+@mixin media-tablet {
+  @media screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media screen and (max-width: 766.98px) {
+    @content;
+  }
+}
+
+@mixin button {
+  display: inline-flex;
+  padding: 13.333px 11.667px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  @content;
+}
+
+@mixin ellipse($width: 0px, $height: 0px) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  &.ellipse--green {
+    background-color: #dcffca;
+  }
+  &.ellipse--orange {
+    background-color: #ffd5bd;
+  }
+  @content;
+}

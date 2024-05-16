@@ -1,0 +1,11 @@
+@use "components/header";
+@use "./pages/home/header" as headerPage;
+// Namespace: header
+// Truy cập mixin, function
+// cú pháp: tên namespace.tenmember
+
+.products {
+  color: header.$textColor;
+  background: headerPage.$primaryColor;
+  @include header.section-base;
+}
