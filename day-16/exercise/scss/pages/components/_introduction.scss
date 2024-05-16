@@ -1,0 +1,140 @@
+@use "../../partials/variables" as v;
+@use "../../partials/mixin";
+
+@mixin introduction {
+  .section_introduction {
+    display: flex;
+    align-items: center;
+    margin-left: calc((100vw - 1200px) / 2);
+    padding-bottom: 130px;
+    @include mixin.media-tablet-large {
+      padding-left: 20px;
+      padding-bottom: 100px;
+      margin-left: 0;
+    }
+    @include mixin.media-tablet-small {
+      padding-bottom: 70px;
+    }
+    @include mixin.media-mobile {
+      padding-bottom: 50px;
+    }
+    .content {
+      flex: 1 0 50%;
+      color: v.$textColor;
+
+      .heading {
+        max-width: 514px;
+        font-size: 3.6667rem;
+        font-weight: 800;
+        line-height: 48.225px;
+      }
+      .sub_heading {
+        max-width: 380px;
+        font-size: 4.2rem;
+        font-weight: 800;
+        line-height: normal;
+        margin: 10px 0 20px;
+      }
+      .desc {
+        max-width: 450px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20.417px; /* 127.604% */
+      }
+      @include mixin.media-tablet-small {
+        .heading {
+          font-size: 3rem;
+        }
+        .desc {
+          font-size: 1.4rem;
+          max-width: 80%;
+        }
+      }
+      @include mixin.media-mobile {
+        .heading {
+          font-size: 1.8rem;
+          line-height: 1.2;
+        }
+        .sub_heading {
+          font-size: 3rem;
+        }
+        .desc {
+          font-size: 1.2rem;
+          line-height: 1.2;
+          max-width: 85%;
+        }
+      }
+    }
+
+    .banner_wrapper {
+      flex: 1 0 50%;
+      max-width: 50%;
+      position: relative;
+      display: flex;
+      background-color: v.$green;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      .banner {
+        position: relative;
+        left: -30%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+      .heading {
+        position: absolute;
+        right: 10%;
+        top: 30%;
+        transform: translateY(-50%);
+        rotate: 90deg;
+        color: #216000;
+        opacity: 0.15;
+        font-size: 16rem;
+        font-weight: 800;
+        line-height: 90%; /* 166.667px */
+        word-break: break-all;
+        overflow: hidden;
+      }
+      @include mixin.media-tablet-large {
+        .banner {
+          left: -25%;
+          top: 160px;
+        }
+        .heading {
+          font-size: 12rem;
+          top: 50px;
+          left: 50%;
+          width: 80%;
+          transform: translateX(-50%);
+          text-align: right;
+          rotate: 0deg;
+        }
+      }
+      @include mixin.media-tablet-small {
+        .banner {
+          left: -25%;
+          top: 160px;
+        }
+        .heading {
+          font-size: 9rem;
+          top: 50px;
+          left: 50%;
+          width: 75%;
+          transform: translateX(-50%);
+          text-align: right;
+          rotate: 0deg;
+        }
+      }
+      @include mixin.media-mobile {
+        .banner {
+          left: -25%;
+          top: 100px;
+        }
+        .heading {
+          font-size: 7rem;
+          max-width: 85%;
+          top: 10%;
+        }
+      }
+    }
+  }
+}

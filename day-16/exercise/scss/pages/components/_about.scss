@@ -1,0 +1,187 @@
+@use "../../partials/variables" as v;
+@use "../../partials/mixin";
+
+@mixin about {
+  .section_about {
+    padding: 130px 0;
+    @include mixin.media-tablet-large {
+      padding: 100px 20px;
+    }
+    @include mixin.media-tablet-small {
+      padding: 70px 20px;
+    }
+    @include mixin.media-mobile {
+      padding: 50px 20px;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      color: v.$textColor;
+      .ellipse {
+        @include mixin.ellipse($width: 235px, $height: 235px);
+        position: absolute;
+        z-index: -1;
+        &.ellipse--green {
+          top: 25%;
+          left: 0;
+        }
+        &.ellipse--orange {
+          right: 0;
+          bottom: 0;
+        }
+      }
+      .heading {
+        max-width: 588px;
+        text-align: center;
+        font-size: 3.1667rem;
+        font-weight: 800;
+        line-height: 131.523%; /* 41.649px */
+        margin: 0 auto 20px;
+      }
+      .desc {
+        max-width: 643px;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin: 0 auto;
+        line-height: 20.417px; /* 127.604% */
+        margin: 0 auto 40px;
+      }
+      @include mixin.media-tablet-small {
+        .heading {
+          font-size: 3rem;
+        }
+        .desc {
+          font-size: 1.4rem;
+          max-width: 80%;
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    .info_list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: -20px;
+
+      @include mixin.media-tablet-large {
+        display: flex;
+      }
+
+      .info_item_box {
+        padding-inline: 20px;
+        flex: 1 0 33.3333%;
+        max-width: 33.3333%;
+
+        &:nth-child(1) .info_item {
+          width: 75%;
+          margin-left: auto;
+        }
+        &:nth-child(2) .info_item {
+          width: 90%;
+          margin: 0 auto;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+        &:nth-child(3) .info_item {
+          width: 80%;
+          margin-right: auto;
+        }
+
+        @include mixin.media-tablet-large {
+          flex-basis: 100%;
+          max-width: 100%;
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3) {
+            .info_item {
+              width: 100%;
+              padding: 20px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .info_item {
+          position: relative;
+          color: v.$textColor;
+          border-radius: 4px;
+          box-shadow: -5.833px 8.333px 72.5px 0px rgba(54, 54, 54, 0.12);
+          background-color: #fff;
+          padding: 30px;
+          z-index: 1;
+
+          @include mixin.media-tablet-large {
+            display: flex;
+          }
+
+          .medal_icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            width: 80px;
+            border-radius: 4px;
+            &.medal_icon--orange {
+              background-color: #fff0e7;
+            }
+            &.medal_icon--green {
+              background-color: #f2ffec;
+            }
+            img {
+              max-width: 80%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+          .about_content {
+            @include mixin.media-tablet-large {
+              flex: 1 0 auto;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin-left: 20px;
+            }
+
+            .heading {
+              font-size: 4.3333rem;
+              font-weight: 800;
+              line-height: normal;
+              text-align: left;
+              margin-top: 20px;
+
+              @include mixin.media-tablet-large {
+                font-size: 3rem;
+                margin: 0;
+                width: 100%;
+                text-align: left;
+              }
+              @include mixin.media-mobile {
+                font-size: 2.4rem;
+              }
+            }
+            .desc {
+              font-size: 2rem;
+              font-weight: 400;
+              line-height: 30.833px; /* 154.167% */
+              text-align: left;
+
+              @include mixin.media-tablet-large {
+                margin: 0;
+              }
+
+              @include mixin.media-tablet-small {
+                width: 100%;
+                font-size: 1.6rem;
+              }
+              @include mixin.media-mobile {
+                width: 100%;
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
