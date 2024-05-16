@@ -127,7 +127,7 @@
   transition: all 0.3s ease;
 }
 
-@include mixin.media-tablet {
+@include mixin.media-tablet-large {
   .header {
     .header_wrapper {
       .menu_icon {
@@ -214,4 +214,6 @@
     visibility: visible;
     opacity: 1;
   }
+}
+@include mixin.media-tablet-small {
 }

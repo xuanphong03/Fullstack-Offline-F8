@@ -1,6 +1,12 @@
 // Định nghĩa các mixin
-@mixin media-tablet {
+@mixin media-tablet-large {
   @media screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin media-tablet-small {
+  @media screen and (max-width: 991.98px) {
     @content;
   }
 }

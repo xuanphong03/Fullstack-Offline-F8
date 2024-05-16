@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     margin-left: calc((100vw - 1200px) / 2);
-
+    padding-bottom: 130px;
     .content {
       flex: 1 0 50%;
       color: v.$textColor;
@@ -65,11 +65,10 @@
 
   // Section About
   .section_about {
-    padding: 50px 0;
+    padding: 130px 0;
 
     .content {
       position: relative;
-      padding: 80px 0;
       z-index: 1;
       color: v.$textColor;
       .ellipse {
@@ -187,7 +186,7 @@
     }
 
     .products_list {
-      margin-top: 100px;
+      margin-top: 20px;
       .product_item {
         position: relative;
         width: 80%;
@@ -195,28 +194,31 @@
         padding: 20px;
         margin-bottom: 100px;
 
-        .ellipse {
-          @include mixin.ellipse($width: 269.316px, $height: 269.316px);
-          position: absolute;
-          top: -15%;
-          left: 50%;
-          transform: translateX(-50%);
-          border-radius: 50%;
-          flex-shrink: 0;
-          z-index: 1;
-        }
         .product_content {
           position: relative;
           display: flex;
           flex-direction: column;
           align-items: center;
           z-index: 2;
-
-          img {
-            max-width: 240px;
-            height: auto;
-            object-fit: cover;
+          .product_thumb {
+            position: relative;
+            margin-bottom: 60px;
+            .ellipse {
+              @include mixin.ellipse($width: 269.316px, $height: 269.316px);
+              border-radius: 50%;
+              flex-shrink: 0;
+            }
+            img {
+              top: 40%;
+              left: 50%;
+              transform: translateX(-50%);
+              position: absolute;
+              max-width: 240px;
+              height: auto;
+              object-fit: cover;
+            }
           }
+
           .product_heading {
             position: relative;
             display: flex;
@@ -275,10 +277,11 @@
   }
 }
 
-@include mixin.media-tablet {
+@include mixin.media-tablet-large {
   .main {
     .section_introduction {
       padding-left: 20px;
+      padding-bottom: 100px;
       margin-left: 0;
       .content {
       }
@@ -299,7 +302,7 @@
       }
     }
     .section_about {
-      padding-inline: 20px;
+      padding: 100px 20px;
 
       .info_list {
         .info_item_box {
@@ -337,21 +340,144 @@
       }
     }
     .section_products {
-      padding: 0;
-      margin-top: 50px;
+      padding: 100px 0;
+
+      .heading {
+        font-size: 3rem;
+      }
+      .products_list {
+        margin-top: 20px;
+        .product_item {
+          width: 100%;
+          margin-bottom: 50px;
+
+          .product_content {
+            .product_thumb {
+              .ellipse {
+                @include mixin.ellipse($width: 230px, $height: 230px);
+              }
+              img {
+                width: 200px;
+              }
+            }
+            .product_heading {
+              font-size: 2rem;
+            }
+            .product_desc {
+              font-size: 1.8rem;
+            }
+            .product_price {
+              font-size: 1.6rem;
+              span {
+                font-size: 1.8rem;
+              }
+            }
+            .btn_add_to_cart {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include mixin.media-tablet-small {
+  .main {
+    .section_introduction {
+      padding-bottom: 70px;
+      .content {
+        .heading {
+          font-size: 3rem;
+        }
+        .desc {
+          font-size: 1.4rem;
+          max-width: 80%;
+        }
+      }
+      .banner_wrapper {
+        .banner {
+          left: -25%;
+          top: 160px;
+        }
+        .heading {
+          font-size: 9rem;
+          top: 50px;
+          left: 50%;
+          width: 75%;
+          transform: translateX(-50%);
+          text-align: right;
+          rotate: 0deg;
+        }
+      }
+    }
+    .section_about {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      .content {
+        .heading {
+          font-size: 3rem;
+        }
+        .desc {
+          font-size: 1.4rem;
+          max-width: 80%;
+          margin-bottom: 50px;
+        }
+        .info_list {
+          .info_item_box {
+            flex-basis: 100%;
+            max-width: 100%;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+              .info_item {
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 20px;
+              }
+            }
+            .info_item {
+              display: flex;
+
+              .about_content {
+                flex: 1 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 20px;
+                .heading {
+                  font-size: 3rem;
+                  width: 100%;
+                  text-align: left;
+                  margin: 0;
+                }
+                .desc {
+                  width: 100%;
+                  font-size: 1.6rem;
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section_products {
+      padding-top: 70px;
+      padding-bottom: 70px;
       .heading {
         font-size: 3rem;
       }
       .products_list {
         .product_item {
-          width: 100%;
-
-          .ellipse {
-            @include mixin.ellipse($width: 200px, $height: 200px);
-          }
           .product_content {
-            img {
-              width: 180px;
+            .product_thumb {
+              .ellipse {
+                @include mixin.ellipse($width: 200px, $height: 200px);
+              }
+              img {
+                width: 180px;
+              }
             }
             .product_heading {
               font-size: 1.8rem;
@@ -377,6 +503,7 @@
 @include mixin.media-mobile {
   .main {
     .section_introduction {
+      padding-bottom: 50px;
       .content {
         .heading {
           font-size: 1.8rem;
@@ -393,17 +520,19 @@
       }
       .banner_wrapper {
         .banner {
-          left: -15%;
+          left: -25%;
+          top: 100px;
         }
         .heading {
-          font-size: 8rem;
-          max-width: 80%;
+          font-size: 7rem;
+          max-width: 85%;
           top: 10%;
         }
       }
     }
     .section_about {
-      margin-top: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
       .content {
         .heading {
           font-size: 3rem;
@@ -426,6 +555,10 @@
           }
         }
       }
+    }
+    .section_products {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
 }
