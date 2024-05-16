@@ -512,6 +512,7 @@ body {
   margin-top: 20px;
 }
 .main .section_products .products_list .product_item {
+  background: #fff;
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -571,7 +572,7 @@ body {
   display: block;
   height: 1px;
   width: 40px;
-  bottom: 0;
+  bottom: -5px;
   background-color: #ccc;
 }
 .main .section_products .products_list .product_item .product_content .product_desc {
@@ -846,6 +847,35 @@ body {
   .main .section_products {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+  .main .section_products .products_list .product_item .product_content .product_thumb .ellipse {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .main .section_products .products_list .product_item .product_content .product_thumb .ellipse.ellipse--green {
+    background-color: #dcffca;
+  }
+  .main .section_products .products_list .product_item .product_content .product_thumb .ellipse.ellipse--orange {
+    background-color: #ffd5bd;
+  }
+  .main .section_products .products_list .product_item .product_content .product_thumb img {
+    width: 150px;
+  }
+  .main .section_products .products_list .product_item .product_content .product_heading {
+    font-size: 1.7rem;
+  }
+  .main .section_products .products_list .product_item .product_content .product_desc {
+    font-size: 1.4rem;
+  }
+  .main .section_products .products_list .product_item .product_content .product_price {
+    font-size: 1.4rem;
+  }
+  .main .section_products .products_list .product_item .product_content .product_price span {
+    font-size: 1.6rem;
+  }
+  .main .section_products .products_list .product_item .product_content .btn_add_to_cart {
+    font-size: 1.4rem;
   }
 }
 
