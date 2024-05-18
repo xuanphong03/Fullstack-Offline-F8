@@ -138,3 +138,8 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
 }
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Inter", sans-serif;
+}

@@ -1,5 +1,5 @@
 @use "../../partials/variables" as v;
-@use "../../partials/mixin";
+@use "../../partials/mixin" as m;
 
 @mixin product {
   $greenColor: #46b20f;
@@ -7,13 +7,13 @@
   .section_products {
     padding: 130px 0;
 
-    @include mixin.media-tablet-large {
+    @include m.media-lg {
       padding: 100px 0;
     }
-    @include mixin.media-tablet-small {
+    @include m.media-md {
       padding: 70px 0;
     }
-    @include mixin.media-mobile {
+    @include m.media-sm {
       padding: 50px 0;
     }
 
@@ -24,7 +24,7 @@
       line-height: 131.523%; /* 41.649px */
       text-align: center;
 
-      @include mixin.media-tablet-large {
+      @include m.media-lg {
         font-size: 3rem;
       }
     }
@@ -40,6 +40,10 @@
         padding: 20px;
         margin-bottom: 100px;
         transition: all 0.3s ease;
+        @include m.media-xm {
+          border-radius: 12px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
 
         &:hover .product_content .product_thumb img {
           top: 5%;
@@ -54,7 +58,7 @@
           cursor: pointer;
         }
 
-        @include mixin.media-tablet-large {
+        @include m.media-lg {
           width: 100%;
           margin-bottom: 50px;
         }
@@ -72,16 +76,16 @@
             .ellipse {
               border-radius: 50%;
               flex-shrink: 0;
-              @include mixin.ellipse($width: 269.316px, $height: 269.316px);
+              @include m.ellipse($width: 269.316px, $height: 269.316px);
 
-              @include mixin.media-tablet-large {
-                @include mixin.ellipse($width: 230px, $height: 230px);
+              @include m.media-lg {
+                @include m.ellipse($width: 230px, $height: 230px);
               }
-              @include mixin.media-tablet-small {
-                @include mixin.ellipse($width: 200px, $height: 200px);
+              @include m.media-md {
+                @include m.ellipse($width: 200px, $height: 200px);
               }
-              @include mixin.media-tablet-small {
-                @include mixin.ellipse($width: 150px, $height: 150px);
+              @include m.media-md {
+                @include m.ellipse($width: 150px, $height: 150px);
               }
             }
             img {
@@ -94,13 +98,13 @@
               object-fit: cover;
               transition: top 0.3s ease;
 
-              @include mixin.media-tablet-large {
+              @include m.media-lg {
                 width: 200px;
               }
-              @include mixin.media-tablet-small {
+              @include m.media-md {
                 width: 180px;
               }
-              @include mixin.media-mobile {
+              @include m.media-sm {
                 width: 150px;
               }
             }
@@ -119,14 +123,14 @@
             padding-bottom: 5px;
             margin-bottom: 10px;
             line-height: 1;
-            @include mixin.media-tablet-large {
+            @include m.media-lg {
               font-size: 2rem;
             }
-            @include mixin.media-tablet-small {
+            @include m.media-md {
               font-size: 1.8rem;
               margin-top: 20px;
             }
-            @include mixin.media-mobile {
+            @include m.media-sm {
               font-size: 1.7rem;
             }
             &::after {
@@ -145,13 +149,13 @@
             font-weight: 400;
             text-align: center;
             line-height: 21.667px; /* 130% */
-            @include mixin.media-tablet-large {
+            @include m.media-lg {
               font-size: 1.8rem;
             }
-            @include mixin.media-tablet-small {
+            @include m.media-md {
               font-size: 1.5rem;
             }
-            @include mixin.media-mobile {
+            @include m.media-sm {
               font-size: 1.4rem;
             }
           }
@@ -162,27 +166,27 @@
             line-height: 21.667px; /* 130% */
             text-align: center;
             margin-bottom: 20px;
-            @include mixin.media-tablet-large {
+            @include m.media-lg {
               font-size: 1.6rem;
             }
-            @include mixin.media-mobile {
+            @include m.media-sm {
               font-size: 1.4rem;
             }
             span {
               font-size: 2.3333rem;
               font-weight: 600;
               line-height: 26.667px;
-              @include mixin.media-tablet-large {
+              @include m.media-lg {
                 font-size: 1.8rem;
               }
-              @include mixin.media-mobile {
+              @include m.media-sm {
                 font-size: 1.6rem;
               }
             }
           }
 
           .btn_add_to_cart {
-            @include mixin.button();
+            @include m.button();
             color: #fff;
             font-size: 1.8rem;
             font-weight: 700;
@@ -195,13 +199,13 @@
               background-color: #fff;
             }
 
-            @include mixin.media-tablet-large {
+            @include m.media-lg {
               font-size: 1.7rem;
             }
-            @include mixin.media-tablet-small {
+            @include m.media-md {
               font-size: 1.6rem;
             }
-            @include mixin.media-mobile {
+            @include m.media-sm {
               font-size: 1.4rem;
             }
           }

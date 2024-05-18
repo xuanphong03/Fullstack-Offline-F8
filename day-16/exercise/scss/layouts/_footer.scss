@@ -1,0 +1,100 @@
+@use "../partials/variables" as v;
+@use "../partials/mixin" as m;
+
+.footer {
+  padding: 50px 0 20px;
+  background-color: #f2ffec;
+
+  .footer_top {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #a3a3a3;
+    .footer_top_item {
+      .logo {
+        img {
+          width: 132px;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+      .footer_top_item-desc {
+        margin-top: 24px;
+        color: v.$textColor;
+        font-size: 13.333px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20.417px; /* 153.125% */
+
+        span {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+
+      .footer_top_item-heading {
+        color: v.$primaryColor;
+        font-size: 16.667px;
+        font-weight: 600;
+        line-height: 21.667px; /* 130% */
+        margin-bottom: 13px;
+      }
+
+      .page_list,
+      .service_list,
+      .contact_list {
+        color: v.$textColor;
+
+        .page_item,
+        .service_item,
+        .contact_item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 6px;
+          gap: 5px;
+          .page_item-link {
+            color: v.$textColor;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.417px; /* 127.604% */
+            &:hover {
+              color: v.$primaryColor;
+            }
+          }
+        }
+        .service_item:not(:first-child) {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px; /* 125% */
+        }
+        .contact_item:last-child {
+          align-items: start;
+        }
+      }
+    }
+  }
+  .footer_bottom {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+    }
+    .socials_list {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .social_item {
+        border-radius: 50%;
+        background-color: #dcffca;
+        .social_link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

@@ -1,18 +1,24 @@
 // Định nghĩa các mixin
-@mixin media-tablet-large {
+@mixin media-lg {
   @media screen and (max-width: 1199.98px) {
     @content;
   }
 }
 
-@mixin media-tablet-small {
+@mixin media-md {
   @media screen and (max-width: 991.98px) {
     @content;
   }
 }
 
-@mixin media-mobile {
+@mixin media-sm {
   @media screen and (max-width: 766.98px) {
+    @content;
+  }
+}
+
+@mixin media-xm {
+  @media screen and (max-width: 575.98px) {
     @content;
   }
 }

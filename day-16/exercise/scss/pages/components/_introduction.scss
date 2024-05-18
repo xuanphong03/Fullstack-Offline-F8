@@ -1,27 +1,26 @@
 @use "../../partials/variables" as v;
-@use "../../partials/mixin";
+@use "../../partials/mixin" as m;
 
 @mixin introduction {
   .section_introduction {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     margin-left: calc((100vw - 1200px) / 2);
     padding-bottom: 130px;
-    @include mixin.media-tablet-large {
-      padding-left: 20px;
+    @include m.media-lg {
       padding-bottom: 100px;
       margin-left: 0;
     }
-    @include mixin.media-tablet-small {
+    @include m.media-md {
       padding-bottom: 70px;
     }
-    @include mixin.media-mobile {
+    @include m.media-sm {
       padding-bottom: 50px;
     }
     .content {
       flex: 1 0 50%;
       color: v.$textColor;
-
       .heading {
         max-width: 514px;
         font-size: 3.6667rem;
@@ -41,7 +40,22 @@
         font-weight: 400;
         line-height: 20.417px; /* 127.604% */
       }
-      @include mixin.media-tablet-small {
+      @include m.media-lg {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 20px;
+
+        .heading,
+        .sub_heading,
+        .desc {
+          text-align: center;
+          margin-inline: auto;
+        }
+        .desc {
+          max-width: 75%;
+        }
+      }
+      @include m.media-md {
         .heading {
           font-size: 3rem;
         }
@@ -50,7 +64,7 @@
           max-width: 80%;
         }
       }
-      @include mixin.media-mobile {
+      @include m.media-sm {
         .heading {
           font-size: 1.8rem;
           line-height: 1.2;
@@ -59,21 +73,34 @@
           font-size: 3rem;
         }
         .desc {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           line-height: 1.2;
           max-width: 85%;
+        }
+      }
+      @include m.media-xm {
+        .sub_heading {
+          font-size: 2.3rem;
+          margin-bottom: 5px;
+        }
+        .desc {
+          font-size: 1.3rem;
         }
       }
     }
 
     .banner_wrapper {
       flex: 1 0 50%;
-      max-width: 50%;
+      width: 50%;
       position: relative;
       display: flex;
       background-color: v.$green;
       border-top-left-radius: 16px;
       border-bottom-left-radius: 16px;
+      @include m.media-lg {
+        border-radius: 0px;
+      }
+
       .banner {
         position: relative;
         left: -30%;
@@ -94,45 +121,48 @@
         word-break: break-all;
         overflow: hidden;
       }
-      @include mixin.media-tablet-large {
+      @include m.media-lg {
+        width: 100%;
+        flex-basis: 100%;
         .banner {
-          left: -25%;
-          top: 160px;
+          top: 200px;
+          left: 0;
+          right: 0;
+          margin-inline: auto;
         }
         .heading {
           font-size: 12rem;
-          top: 50px;
+          top: 100px;
           left: 50%;
           width: 80%;
           transform: translateX(-50%);
-          text-align: right;
+          text-align: center;
           rotate: 0deg;
         }
       }
-      @include mixin.media-tablet-small {
+      @include m.media-md {
         .banner {
-          left: -25%;
-          top: 160px;
-        }
-        .heading {
-          font-size: 9rem;
-          top: 50px;
-          left: 50%;
-          width: 75%;
-          transform: translateX(-50%);
-          text-align: right;
-          rotate: 0deg;
-        }
-      }
-      @include mixin.media-mobile {
-        .banner {
-          left: -25%;
           top: 100px;
+          max-width: 500px;
         }
         .heading {
-          font-size: 7rem;
-          max-width: 85%;
-          top: 10%;
+          font-size: 9.5rem;
+          top: 50px;
+        }
+      }
+      @include m.media-sm {
+        .heading {
+          font-size: 6.4rem;
+        }
+      }
+      @include m.media-xm {
+        .banner {
+          top: 50px;
+          max-width: 280px;
+        }
+        .heading {
+          top: 20px;
+          font-size: 5rem;
         }
       }
     }

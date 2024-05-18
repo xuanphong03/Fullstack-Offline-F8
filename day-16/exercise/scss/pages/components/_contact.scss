@@ -1,0 +1,86 @@
+@use "../../partials/variables" as v;
+@use "../../partials/mixin" as m;
+
+@mixin contact {
+  .section_contact {
+    padding: 50px 0;
+    .contact_thumbnail {
+      @include m.media-lg {
+        display: flex;
+        justify-content: center;
+      }
+      img {
+        max-width: 100%;
+        object-fit: cover;
+        transform: translateY(-10%);
+      }
+    }
+    .contact_form-wrapper {
+      padding: 20px 50px;
+      @include m.media-xm {
+        padding: 20px;
+      }
+      .contact_form-heading {
+        color: v.$textColor;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 26.667px; /* 133.333% */
+        @include m.media-lg {
+          text-align: center;
+        }
+        @include m.media-xm {
+          font-size: 1.8rem;
+        }
+      }
+      .contact_form {
+        margin-top: 26px;
+        input,
+        textarea {
+          border-radius: 6.667px;
+          border: 0.833px solid #a3a3a3;
+          width: 100%;
+          padding: 10px 20px;
+          color: v.$textColor;
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: normal;
+
+          &::placeholder {
+            color: #a3a3a3;
+            font-size: 1.6rem;
+          }
+          @include m.media-xm {
+            font-size: 1.4rem;
+            &::placeholder {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        .btn_submit {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 13.333px 11.667px;
+          width: 128px;
+          height: 46px;
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: #fff;
+          border-radius: 6.667px;
+          background: #46b20f;
+          border: 2px solid #46b20f;
+          margin-left: auto;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          &:hover {
+            background: #fff;
+            color: #46b20f;
+          }
+          @include m.media-sm {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

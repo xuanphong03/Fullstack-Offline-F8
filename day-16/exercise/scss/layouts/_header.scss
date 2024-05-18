@@ -2,10 +2,11 @@
 @use "../partials/mixin";
 
 .header {
+  position: relative;
   box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
   z-index: 100;
   background: #fff;
-
+  z-index: 9999;
   .header_wrapper {
     display: flex;
     justify-content: space-between;
@@ -30,6 +31,7 @@
       align-self: center;
       font-size: 2rem;
       padding: 10px;
+      cursor: pointer;
     }
 
     .navbar {
@@ -85,13 +87,13 @@
               align-items: center;
               justify-content: center;
               position: absolute;
-              top: -15px;
-              right: -5px;
+              top: -10px;
+              right: -10px;
               background-color: v.$red;
               color: #fff;
               border-radius: 50%;
-              width: 16px;
-              height: 16px;
+              width: 18px;
+              height: 18px;
               font-size: 1.2rem;
             }
             img {
@@ -121,14 +123,15 @@
   position: fixed;
   inset: 0;
   background-color: #0000007b;
-  z-index: 999;
+  z-index: 9999 !important;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease;
 }
 
-@include mixin.media-tablet-large {
+@include mixin.media-lg {
   .header {
+    position: static;
     .header_wrapper {
       .menu_icon {
         display: block;
@@ -165,8 +168,8 @@
               width: fit-content;
               padding: 10px;
               .badge {
-                top: 0;
-                right: 0;
+                top: -5px;
+                right: -5px;
                 width: 22px;
                 height: 22px;
               }
@@ -214,6 +217,4 @@
     visibility: visible;
     opacity: 1;
   }
-}
-@include mixin.media-tablet-small {
 }

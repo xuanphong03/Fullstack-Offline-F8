@@ -4,6 +4,9 @@
 @use "./components/about";
 @use "./components/product";
 @use "./components/news";
+@use "./components/description" as desc;
+@use "./components/service";
+@use "./components/contact";
 
 .main {
   // Section Introduction
@@ -17,4 +20,13 @@
 
   // Section News
   @include news.news();
+
+  // Section Description
+  @include desc.description();
+
+  // Section Service
+  @include service.service();
+
+  // Section Service
+  @include contact.contact();
 }
