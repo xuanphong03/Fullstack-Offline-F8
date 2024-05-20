@@ -1,5 +1,6 @@
 @use "../../partials/variables" as v;
 @use "../../partials/mixin";
+@use "../../partials/base";
 
 @mixin about {
   .section_about {
@@ -200,4 +201,5 @@
       }
     }
   }
+  @content;
 }

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenChop - About Page</title>
+    <!-- fontawersome cnd -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- animation style cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- wowjs cnd -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="../css/grid.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <input type="checkbox" name="menu_tablet" id="menu_tablet" hidden />
+    <label for="menu_tablet" class="bg_shadow"></label>
+    <header class="header">
+      <div class="container">
+        <div class="header_wrapper">
+          <a href="#" class="logo">
+            <img src="../images/logo.png" alt="logo" />
+          </a>
+          <label for="menu_tablet" class="menu_icon"
+            ><i class="fa-solid fa-bars"></i
+          ></label>
+          <nav class="navbar">
+            <label for="menu_tablet" class="close_icon"
+              ><i class="fa-solid fa-xmark"></i
+            ></label>
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="/">Trang chủ</a>
+              </li>
+              <li class="nav_item">
+                <a href="/pages/about.html">Về Greenchop</a>
+              </li>
+              <li class="nav_item nav_item--active">
+                <a href="/pages/products.html">Sản phẩm</a>
+              </li>
+              <li class="nav_item">
+                <a href="/pages/news.html">Tin tức</a>
+              </li>
+              <li class="nav_item">
+                <a href="/pages/contact.html">Liên hệ</a>
+              </li>
+              <li class="nav_item">
+                <a href="/pages/cart.html"
+                  ><img src="../images/cart-icon.svg" alt="cart icon" />
+                  <span class="badge">3</span>
+                </a>
+              </li>
+              <li class="nav_item">
+                <a href="#seach"
+                  ><img src="../images/search-icon.svg" alt="cart icon"
+                /></a>
+                <input
+                  type="text"
+                  class="search_box"
+                  placeholder="Tìm kiếm..."
+                />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="page_heading-wrapper">
+        <h1
+          class="page_heading wow animate__animated animate__backInLeft"
+          data-wow-duration="1s"
+        >
+          Sản phẩm
+        </h1>
+      </div>
+
+      <!-- Start: Section Products -->
+      <section class="section_products">
+        <div class="container">
+          <h2 class="heading">Sản phẩm</h2>
+          <div class="products_list">
+            <div class="row g-2">
+              <!-- Product Item -->
+              <div
+                class="col-12 col-sm-6 col-md-4 wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="product_content">
+                    <div class="product_thumb">
+                      <div class="ellipse ellipse--orange"></div>
+                      <img src="../images/sp1.png" alt="Hình ảnh sản phẩm" />
+                    </div>
+                    <h3 class="product_heading">
+                      Combo <br />
+                      Quán ăn
+                    </h3>
+                    <p class="product_desc">1 thùng 1000 đôi</p>
+                    <p class="product_price">Giá: <span>600.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-12 col-sm-6 col-md-4 wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.1s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="product_content">
+                    <div class="product_thumb">
+                      <div class="ellipse ellipse--green"></div>
+                      <img src="../images/sp2.png" alt="Hình ảnh sản phẩm" />
+                    </div>
+                    <h3 class="product_heading">
+                      Combo <br />
+                      Quán ăn - Nhà hàng
+                    </h3>
+                    <p class="product_desc">1 thùng 1000 đôi</p>
+                    <p class="product_price">Giá: <span>600.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-12 col-sm-6 col-md-4 wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="product_content">
+                    <div class="product_thumb">
+                      <div class="ellipse ellipse--orange"></div>
+                      <img src="../images/sp3.png" alt="Hình ảnh sản phẩm" />
+                    </div>
+                    <h3 class="product_heading">
+                      Combo Quán ăn <br />
+                      Nhà hàng - Khách sạn
+                    </h3>
+                    <p class="product_desc">1 thùng 1000 đôi</p>
+                    <p class="product_price">Giá: <span>600.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-12 col-sm-6 col-md-4 wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="product_content">
+                    <div class="product_thumb">
+                      <div class="ellipse ellipse--orange"></div>
+                      <img src="../images/sp1.png" alt="Hình ảnh sản phẩm" />
+                    </div>
+                    <h3 class="product_heading">
+                      Combo <br />
+                      Quán ăn
+                    </h3>
+                    <p class="product_desc">1 thùng 1000 đôi</p>
+                    <p class="product_price">Giá: <span>600.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-12 col-sm-6 col-md-4 wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.1s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="product_content">
+                    <div class="product_thumb">
+                      <div class="ellipse ellipse--green"></div>
+                      <img src="../images/sp2.png" alt="Hình ảnh sản phẩm" />
+                    </div>
+                    <h3 class="product_heading">
+                      Combo <br />
+                      Quán ăn - Nhà hàng
+                    </h3>
+                    <p class="product_desc">1 thùng 1000 đôi</p>
+                    <p class="product_price">Giá: <span>600.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+
+              <!-- Product Item -->
+              <div
+                class="col-12 col-sm-6 col-md-4 wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+                data-wow-offset="100"
+              >
+                <article class="product_item">
+                  <div class="product_content">
+                    <div class="product_thumb">
+                      <div class="ellipse ellipse--orange"></div>
+                      <img src="../images/sp3.png" alt="Hình ảnh sản phẩm" />
+                    </div>
+                    <h3 class="product_heading">
+                      Combo Quán ăn <br />
+                      Nhà hàng - Khách sạn
+                    </h3>
+                    <p class="product_desc">1 thùng 1000 đôi</p>
+                    <p class="product_price">Giá: <span>600.000</span>vnd</p>
+                    <button class="btn_add_to_cart">Thêm vào giỏ hàng</button>
+                  </div>
+                </article>
+              </div>
+              <!-- Product Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End: Section Products -->
+
+      <!-- Start: Section Description Product -->
+      <section class="section_description_product">
+        <div class="description_product-content">
+          <img
+            src="../images/description_product_background.svg"
+            alt="description_product_background"
+            class="description_product-bg"
+          />
+          <h2
+            class="description_product-heading wow animate__animated animate__fadeInLeft"
+            data-wow-duration="1s"
+            data-wow-offset="80"
+          >
+            Đũa thay đầu GreenChop - <br />
+            thẻ xanh an toàn trong từng bữa ăn
+          </h2>
+          <p
+            class="description_product-desc wow animate__animated animate__fadeInLeft"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
+            data-wow-offset="80"
+          >
+            GreenChop là sản phẩm đũa thay đầu duy nhất trên thị trường hiện
+            tại. Sản phẩm cho phép người dùng tháo lắp và thay mới đầu đũa 100%
+            trong mỗi bữa ăn. Nhờ đó, GreenChop giúp ngăn ngừa khả năng lây lan
+            dịch bệnh và đảm bảo an toàn cho người dùng.
+          </p>
+        </div>
+        <img
+          src="../images/description_product_thumbnail.png"
+          alt="description_product_thumbnail"
+          class="description_product-thumbnail wow animate__animated animate__fadeInRight"
+          data-wow-duration="1s"
+          data-wow-offset="80"
+        />
+      </section>
+      <!-- End: Section Description Product -->
+
+      <!-- Start: Section Description -->
+      <section class="section_description">
+        <h2 class="description_heading">
+          GreenChop bảo vệ <br />
+          người dùng như thế nào?
+        </h2>
+        <p class="description_desc">
+          Mỗi đôi đũa GreenChop gồm 2 phần thân đũa và đầu đũa. <br />
+          Người dùng có thể dễ dàng tách rời hoặc gắn liền 2 phần này với nhau
+        </p>
+        <div class="desc_list-wrapper">
+          <div class="bg-orange"></div>
+          <div class="desc_list">
+            <div class="row g-4">
+              <!-- Start: Description Item -->
+              <div
+                class="col-12 col-md-6 col-xl-4 animate__animated animate__fadeInUp wow"
+                data-wow-offset="100"
+                data-wow-duration="1s"
+                data-wow-delay="0s"
+              >
+                <div class="desc_item">
+                  <div class="desc_thumbnail">
+                    <img
+                      src="../images/desc_thumb_1.png"
+                      alt="Description thumbnail"
+                    />
+                  </div>
+                  <div class="desc_content">
+                    <h3 class="desc_item-heading">01. Thân trên đũa</h3>
+                    <p class="desc_item-desc">
+                      Làm từ nhựa Melamine, đầy đủ điều kiện chứng nhận An toàn
+                      thực phẩm.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End: Description Item -->
+
+              <!-- Start: Description Item -->
+              <div
+                class="col-12 col-md-6 col-xl-4 animate__animated animate__fadeInUp wow"
+                data-wow-offset="100"
+                data-wow-duration="1s"
+                data-wow-delay="0.1s"
+              >
+                <div class="desc_item">
+                  <div class="desc_thumbnail">
+                    <img
+                      src="../images/desc_thumb_2.png"
+                      alt="Description thumbnail"
+                    />
+                  </div>
+                  <div class="desc_content">
+                    <h3 class="desc_item-heading">02. Đầu đũa</h3>
+                    <p class="desc_item-desc">
+                      Được làm từ gỗ tre và bảo quản trong bọc khử trùng 100%,
+                      không hề có sự xâm nhập của vi khuẩn/vì rus gây hại. Người
+                      dùng là người đầu tiên chạm tay vào đầu đũa sau khi mở
+                      bọc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End: Description Item -->
+
+              <!-- Start: Description Item -->
+              <div
+                class="col-12 col-md-6 col-xl-4 animate__animated animate__fadeInUp wow"
+                data-wow-offset="100"
+                data-wow-duration="1s"
+                data-wow-delay="0.2s"
+              >
+                <div class="desc_item">
+                  <div class="desc_thumbnail">
+                    <img
+                      src="../images/desc_thumb_3.png"
+                      alt="Description thumbnail"
+                    />
+                  </div>
+                  <div class="desc_content">
+                    <h3 class="desc_item-heading">03. Khớp Inox 304</h3>
+                    <p class="desc_item-desc">
+                      Khớp Inox 304 để gắn 2 phần đũa với nhau
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End: Description Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End: Section Description -->
+
+      <!-- Start: Section Product Manual -->
+      <section class="section_product_manual">
+        <div class="container">
+          <h2 class="product_manual-heading">
+            Hướng dẫn thao tác <br />
+            sử dụng đũa GreenChop
+          </h2>
+          <p class="product_manual-desc">
+            Bằng cách này, người dùng sẽ có một đôi đũa với đầu đũa mới 100%,
+            không qua tay bất kỳ ai trước đó
+          </p>
+          <div class="product_manual-list">
+            <div class="row g-5">
+              <!-- Product Manual Item -->
+              <div
+                class="col-12 col-sm-6 col-lg-4 col-xxl-3 animate__animated animate__fadeInUp wow"
+                data-wow-duration="1s"
+                data-wow-offset="50"
+                data-wow-delay="0s"
+              >
+                <article class="product_manual-item">
+                  <img
+                    src="../images/Ellipse-bg-product_manual.svg"
+                    alt="Ellipse background"
+                    class="product_manual-bg-ellipse"
+                  />
+                  <h3 class="product_manual-item-heading">01</h3>
+                  <p class="product_manual-item-desc">
+                    Tháo bọc đầu đũa, lấy đầu đũa tre đã khử trùng 100% ghép vào
+                    thân đũa, tạo thành một đôi đũa hoàn chỉnh.
+                  </p>
+                </article>
+              </div>
+              <!-- Product Manual Item -->
+
+              <!-- Product Manual Item -->
+              <div
+                class="col-12 col-sm-6 col-lg-4 col-xxl-3 animate__animated animate__fadeInUp wow"
+                data-wow-duration="1s"
+                data-wow-offset="50"
+                data-wow-delay="0.05s"
+              >
+                <article class="product_manual-item">
+                  <img
+                    src="../images/Ellipse-bg-product_manual.svg"
+                    alt="Ellipse background"
+                    class="product_manual-bg-ellipse"
+                  />
+                  <h3 class="product_manual-item-heading">02</h3>
+                  <p class="product_manual-item-desc">
+                    Dùng bữa với đũa GreenChop đã ghép. Sau khi dùng bữa xong,
+                    tháo đầu đũa đã dùng để bỏ đi.
+                  </p>
+                </article>
+              </div>
+              <!-- Product Manual Item -->
+
+              <!-- Product Manual Item -->
+              <div
+                class="col-12 col-sm-6 col-lg-4 col-xxl-3 animate__animated animate__fadeInUp wow"
+                data-wow-duration="1s"
+                data-wow-offset="50"
+                data-wow-delay="0.1s"
+              >
+                <article class="product_manual-item">
+                  <img
+                    src="../images/Ellipse-bg-product_manual.svg"
+                    alt="Ellipse background"
+                    class="product_manual-bg-ellipse"
+                  />
+                  <h3 class="product_manual-item-heading">03</h3>
+                  <p class="product_manual-item-desc">
+                    Giữ lại thân đũa, vệ sinh sạch sẽ để sử dụng cho những bữa
+                    ăn sau đó.
+                  </p>
+                </article>
+              </div>
+              <!-- Product Manual Item -->
+
+              <!-- Product Manual Item -->
+              <div
+                class="col-12 col-sm-6 col-lg-4 col-xxl-3 animate__animated animate__fadeInUp wow"
+                data-wow-duration="1s"
+                data-wow-offset="50"
+                data-wow-delay="0.15s"
+              >
+                <article class="product_manual-item">
+                  <img
+                    src="../images/Ellipse-bg-product_manual.svg"
+                    alt="Ellipse background"
+                    class="product_manual-bg-ellipse"
+                  />
+                  <h3 class="product_manual-item-heading">04</h3>
+                  <p class="product_manual-item-desc">
+                    Tiếp tục sử dụng một đầu đũa mới để gắn vào thân đũa trong
+                    lần dùng bữa tiếp theo.
+                  </p>
+                </article>
+              </div>
+              <!-- Product Manual Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End: Section Product Manual -->
+
+      <section class="section_product_guide">
+        <p class="product_guide_desc animate__animated animate__fadeInLeft wow">
+          Thao tác thay đầu đũa mỗi bữa ăn giúp người dùng sử dụng một đôi đũa
+          mới trong mọi bữa ăn và không có sự xâm nhập của virus/vi khuẩn gây
+          bệnh trước đó. Nhờ vậy, GreenChop đảm bảo an toàn cho thực khách và
+          đẩy lùi nguy cơ lây lan dịch bệnh trong ăn uống hàng ngày.
+        </p>
+        <img
+          src="../images/product_guide_thumbnail.png"
+          alt=""
+          class="product_guide-thumbnail animate__animated animate__fadeInRight wow"
+        />
+      </section>
+
+      <section class="section_protected_product">
+        <h2 class="protected_product-heading">
+          Bảo vệ bản thân <br />
+          nguyên tắc 5k cùng Greenchop
+        </h2>
+
+        <div class="protected_product-list">
+          <div class="protected_product-item">
+            <img
+              src="../images/protect1.png"
+              alt="Protected Product"
+              class="protected_product-thumbnail"
+            />
+            <p
+              class="protected_product-desc animate__animated animate__fadeInRight wow"
+              data-wow-offset="100"
+            >
+              Kể cả khi đã thực hiện 5K, việc dùng chung dụng cụ ăn uống với
+              người khác vẫn mang những tiềm tàng khả năng bị lây bệnh. Lúc này,
+              đầu đũa được thay thế mỗi bữa ăn giúp ngăn ngừa sự bám víu của
+              Covid 19 cũng như các loại vị khuẩn/virus gây bệnh khác. Không chỉ
+              có thể, GreenChop là sự lựa chọn hoàn hảo cho những thực khách có
+              thói quen sử dụng dụng cụ cá nhân ngay cả tại những nơi công cộng
+              một cách dễ dàng.
+            </p>
+          </div>
+
+          <div class="protected_product-item">
+            <img
+              src="../images/protect2.png"
+              alt="Protected Product"
+              class="protected_product-thumbnail"
+            />
+            <p
+              class="protected_product-desc animate__animated animate__fadeInLeft wow"
+              data-wow-offset="100"
+            >
+              Đũa GreenChop hoàn thiện cả về công năng lẫn thẩm mỹ. Đầu đũa được
+              làm từ 100% chất liệu tự nhiên, màu sắc hài hòa, kiểu dáng cứng
+              cáp không khác gì đũa ăn truyền thống. Hiện đại, tối giản là những
+              đặc tính nổi bật nhất khi bàn tới thiết kế của sản phẩm. Chính vì
+              thế, GreenChop dần trở thành vật bất ly thân và giúp khẳng định sự
+              đẳng cấp và sự tinh tế của những thực khách văn minh.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start: Section Service -->
+      <section class="section_service">
+        <div class="services_list">
+          <div class="row g-5">
+            <!-- Start: Service Item -->
+            <div
+              class="col-6 col-xl-4 wow animate__animated animate__fadeInUp"
+              data-wow-offset="100"
+              data-wow-duration="1s"
+              data-wow-delay="0s"
+            >
+              <div class="service_item">
+                <div class="service_thumbnail">
+                  <img src="../images/service1.png" alt="Service Icon" />
+                </div>
+                <div class="service_content">
+                  <h3 class="service_item-heading">Chất liệu an toàn</h3>
+                  <p class="service_item-desc">
+                    Phần đầu đũa được làm bằng bằng gỗ tre, đảm bảo cho sức khỏe
+                    người dùng
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End: Service Item -->
+
+            <!-- Start: Service Item -->
+            <div
+              class="col-6 col-xl-4 wow animate__animated animate__fadeInUp"
+              data-wow-offset="100"
+              data-wow-duration="1s"
+              data-wow-delay="0.1s"
+            >
+              <div class="service_item">
+                <div class="service_thumbnail">
+                  <img src="../images/service2.png" alt="Service Icon" />
+                </div>
+                <div class="service_content">
+                  <h3 class="service_item-heading">Vệ sinh và khử khuẩn</h3>
+                  <p class="service_item-desc">
+                    Đầu đũa mới 100% mỗi bữa ăn, không chung đụng đầu đũa với
+                    bất kì ai khác.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End: Service Item -->
+
+            <!-- Start: Service Item -->
+            <div
+              class="col-6 col-xl-4 wow animate__animated animate__fadeInUp"
+              data-wow-offset="100"
+              data-wow-duration="1s"
+              data-wow-delay="0.2s"
+            >
+              <div class="service_item">
+                <div class="service_thumbnail">
+                  <img src="../images/service3.png" alt="Service Icon" />
+                </div>
+                <div class="service_content">
+                  <h3 class="service_item-heading">Tiện lợi</h3>
+                  <p class="service_item-desc">
+                    Thao tác tháo lắp nhanh gọn và đơn giản
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End: Service Item -->
+
+            <!-- Start: Service Item -->
+            <div
+              class="col-6 col-xl-4 wow animate__animated animate__fadeInUp"
+              data-wow-offset="100"
+              data-wow-duration="1s"
+              data-wow-delay="0s"
+            >
+              <div class="service_item">
+                <div class="service_thumbnail">
+                  <img src="../images/service4.png" alt="Service Icon" />
+                </div>
+                <div class="service_content">
+                  <h3 class="service_item-heading">Tiết kiệm</h3>
+                  <p class="service_item-desc">
+                    Giá thành đầu đũa cạnh tranh và hợp lý.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End: Service Item -->
+
+            <!-- Start: Service Item -->
+            <div
+              class="col-6 col-xl-4 wow animate__animated animate__fadeInUp"
+              data-wow-offset="100"
+              data-wow-duration="1s"
+              data-wow-delay="0.1s"
+            >
+              <div class="service_item">
+                <div class="service_thumbnail">
+                  <img src="../images/service5.png" alt="Service Icon" />
+                </div>
+                <div class="service_content">
+                  <h3 class="service_item-heading">Độc quyền</h3>
+                  <p class="service_item-desc">
+                    GreenChop là sản phẩm đũa thay đầu duy nhất trên thị trường
+                    Việt Nam hiện tại
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End: Service Item -->
+
+            <!-- Start: Service Item -->
+            <div
+              class="col-6 col-xl-4 wow animate__animated animate__fadeInUp"
+              data-wow-offset="100"
+              data-wow-duration="1s"
+              data-wow-delay="0.2s"
+            >
+              <div class="service_item">
+                <div class="service_thumbnail">
+                  <img src="../images/service6.png" alt="Service Icon" />
+                </div>
+                <div class="service_content">
+                  <h3 class="service_item-heading">Giao hàng nhanh</h3>
+                  <p class="service_item-desc">Giao hàng trong 24h</p>
+                </div>
+              </div>
+            </div>
+            <!-- End: Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- End: Section Service -->
+    </main>
+    <!--Start: Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_top">
+          <div class="row g-5">
+            <!-- Footer Item Top -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="footer_top_item">
+                <div class="logo">
+                  <img src="../images/logo.png" alt="Logo" />
+                </div>
+                <p class="footer_top_item-desc">
+                  GreenChop là bạn đồng hành <br />
+                  <span>của người tiêu dùng</span>
+                </p>
+              </div>
+            </div>
+            <!-- Footer Item Top -->
+
+            <!-- Footer Item Top -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="footer_top_item">
+                <h3 class="footer_top_item-heading">Sản phẩm</h3>
+                <ul class="page_list">
+                  <li class="page_item">
+                    <a class="page_item-link" href="../index.html">Trang chủ</a>
+                  </li>
+                  <li class="page_item">
+                    <a class="page_item-link" href="./about.html"
+                      >Về GreenChop</a
+                    >
+                  </li>
+
+                  <li class="page_item">
+                    <a class="page_item-link" href="./news.html">Tin tức</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Footer Item Top -->
+
+            <!-- Footer Item Top -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="footer_top_item">
+                <h3 class="footer_top_item-heading">Hỗ trợ</h3>
+                <ul class="service_list">
+                  <li class="service_item">Đặt hàng trực tuyến (8h-22h)</li>
+                  <li class="service_item">
+                    <img src="../images/alarm.png" alt="alarm" />
+                    Về GreenChop
+                  </li>
+                  <li class="service_item">
+                    <img
+                      src="../images/phone_outline.png"
+                      alt="phone_outline"
+                    />
+                    Sản phẩm
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Footer Item Top -->
+
+            <!-- Footer Item Top -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="footer_top_item">
+                <h3 class="footer_top_item-heading">Trang chủ</h3>
+                <ul class="contact_list">
+                  <li class="page_item">
+                    <img src="../images/mail.png" alt="mail icon" />
+                    greenchopvn@gmail.com
+                  </li>
+                  <li class="contact_item">
+                    <img src="../images/globe.png" alt="globe icon" />
+                    Greenchop.vn
+                  </li>
+                  <li class="contact_item">
+                    <img src="../images/map-pin.png" alt="map pin icon" />
+                    428 Điện Biên Phủ, P11, Quận 10, TPHCM
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Footer Item Top -->
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <img
+            src="../images/permission.png"
+            alt="permission"
+            class="permission"
+          />
+          <ul class="socials_list">
+            <li class="social_item">
+              <a href="#youtebe" class="social_link">
+                <img src="../images/youtube.png" alt="youtube" />
+              </a>
+            </li>
+            <li class="social_item">
+              <a href="#youtebe" class="social_link">
+                <img src="../images/facebook.png" alt="facebook" />
+              </a>
+            </li>
+            <li class="social_item">
+              <a href="#youtebe" class="social_link">
+                <img src="../images/instagram.svg" alt="instagram" />
+              </a>
+            </li>
+            <li class="social_item">
+              <a href="#youtebe" class="social_link">
+                <img src="../images/twitter.png" alt="twitter" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- End: Footer -->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>

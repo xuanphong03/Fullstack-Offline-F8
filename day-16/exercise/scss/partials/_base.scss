@@ -1,1 +1,36 @@
 // Định nghĩa các class hay sử dụng
+@use "../partials/mixin" as m;
+
+@mixin headingPage {
+  .page_heading-wrapper {
+    display: flex;
+    align-items: center;
+    height: 166.667px;
+    background: #f2ffec;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    .page_heading {
+      max-width: 1200px;
+      margin-left: calc((100vw - 1200px) / 2);
+      font-size: 43.333px;
+
+      @include m.media-lg {
+        padding-inline: 15px;
+        margin-left: 15.6px;
+        font-size: 4rem;
+      }
+      @include m.media-xm {
+        font-size: 3rem;
+      }
+    }
+    @include m.media-lg {
+      height: 150px;
+      justify-content: center;
+    }
+    @include m.media-xm {
+      height: 100px;
+    }
+  }
+  @content;
+}
