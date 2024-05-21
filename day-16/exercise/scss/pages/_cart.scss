@@ -140,14 +140,18 @@
                 line-height: 21.667px; /* 130% */
               }
               .btn-remove {
-                background-image: url("../../images/close_big.png");
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 width: 25px;
                 height: 25px;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
+
                 cursor: pointer;
+                img {
+                  max-width: 100%;
+                  max-height: 100%;
+                  object-fit: cover;
+                }
               }
             }
           }

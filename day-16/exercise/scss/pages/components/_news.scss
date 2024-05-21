@@ -1,5 +1,6 @@
 @use "../../partials/variables" as v;
 @use "../../partials/mixin" as m;
+@use "../../partials/base" as b;
 
 @mixin news {
   .section_news {

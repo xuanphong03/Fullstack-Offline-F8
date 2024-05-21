@@ -10,6 +10,8 @@
 @use "./components/contact";
 
 .main.main_news_page {
+  @include base.headingPage();
+
   .section_container {
     max-width: 1000px;
     margin-inline: auto;
