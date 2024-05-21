@@ -9,7 +9,7 @@
 @use "./components/service";
 @use "./components/contact";
 
-.main {
+.main.main_news_page {
   .section_container {
     max-width: 1000px;
     margin-inline: auto;

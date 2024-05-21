@@ -8,7 +8,7 @@
 @use "./components/service";
 @use "./components/contact";
 
-.main {
+.main.main_home_page {
   // Section Introduction
   @include intro.introduction();
 

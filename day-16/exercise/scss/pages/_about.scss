@@ -9,7 +9,7 @@
 @use "./components/service";
 @use "./components/contact";
 
-.main {
+.main.main_about_page {
   color: v.$textColor;
   @include base.headingPage();
   // Section About
