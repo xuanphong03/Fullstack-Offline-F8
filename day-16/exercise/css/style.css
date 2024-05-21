@@ -1138,43 +1138,6 @@ textarea::placeholder {
     font-size: 1.4rem;
   }
 }
-.main.main_home_page .page_heading-wrapper {
-  display: flex;
-  align-items: center;
-  height: 166.667px;
-  background: #f2ffec;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.main.main_home_page .page_heading-wrapper .page_heading {
-  max-width: 1200px;
-  margin-left: calc((100vw - 1200px) / 2);
-  font-size: 43.333px;
-}
-@media screen and (max-width: 1199.98px) {
-  .main.main_home_page .page_heading-wrapper .page_heading {
-    padding-inline: 15px;
-    margin-left: 15.6px;
-    font-size: 4rem;
-  }
-}
-@media screen and (max-width: 575.98px) {
-  .main.main_home_page .page_heading-wrapper .page_heading {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 1199.98px) {
-  .main.main_home_page .page_heading-wrapper {
-    height: 150px;
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 575.98px) {
-  .main.main_home_page .page_heading-wrapper {
-    height: 100px;
-  }
-}
 .main.main_home_page .section_news {
   color: #2c2c2c;
   background: #fff;
